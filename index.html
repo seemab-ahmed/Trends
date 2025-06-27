@@ -63,46 +63,28 @@
             <div class="scroll-progress-bar"></div>
         </div>
     </nav>
-
+    <section class="vedio-section">
+        <div class="hero-background">
+                    <video autoplay muted loop playsinline>
+                        <source src="./assets/trend-bg.mp4" type="video/mp4">
+                    </video>
+                    <div class="hero-gradient"></div>
+        </div>
+    </section>
     <!-- Hero Section -->
     <section class="hero">
-        <!-- <div class="hero-background">
-            <video autoplay muted loop playsinline>
-                <source src="./assets/trend-bg.mp4" type="video/mp4">
-            </video>
-            <div class="hero-gradient"></div>
-        </div> -->
-        <!-- hero-section start here -->
-       
         <div class="main_wrapper">
-            <!-- <div class="hero-content">
-                <h1 class="hero-title hero-title-animated" data-i18n="heroTitle">Trend: il tuo radar sui mercati</h1>
-                <p class="hero-subtitle hero-subtitle-animated" data-i18n="heroSubtitle">
-                    Trend è una piattaforma di previsione dei mercati finanziari che sfrutta la gamification per validare l'accuratezza degli utenti. Ogni utente formula previsioni su asset azionari e crypto, monitora le performance e ottiene punteggi reputazionali in base alla precisione. Nessuna operatività diretta, solo signal e competizione.
-                </p>
-                <div class="hero-cta hero-cta-animated">
-                    <a href="about.html" class="primary-button glow-effect" data-i18n="discoverTrend">Scopri Trend</a>
-                    <a href="demo.html" class="secondary-button" data-i18n="requestDemo">Richiedi Demo</a>
+             <section class="hero_section zoom-section">
+                <div class="hero-content">
+                    <h1 class="hero-title hero-title-animated" data-i18n="heroTitle">Trend: il tuo radar sui mercati</h1>
+                    <p class="hero-subtitle hero-subtitle-animated" data-i18n="heroSubtitle">
+                        Trend è una piattaforma di previsione dei mercati finanziari che sfrutta la gamification per validare l'accuratezza degli utenti. Ogni utente formula previsioni su asset azionari e crypto, monitora le performance e ottiene punteggi reputazionali in base alla precisione. Nessuna operatività diretta, solo signal e competizione.
+                    </p>
+                    <div class="hero-cta hero-cta-animated">
+                        <a href="about.html" class="primary-button glow-effect" data-i18n="discoverTrend">Scopri Trend</a>
+                        <a href="demo.html" class="secondary-button" data-i18n="requestDemo">Richiedi Demo</a>
+                    </div>
                 </div>
-            </div> -->
-             <section class="hero_section">
-            <div class="hero-background">
-             <video autoplay muted loop playsinline>
-                <source src="./assets/trend-bg.mp4" type="video/mp4">
-             </video>
-             <div class="hero-gradient"></div>
-            </div>
-            
-            <div class="hero-content">
-                <h1 class="hero-title hero-title-animated" data-i18n="heroTitle">Trend: il tuo radar sui mercati</h1>
-                <p class="hero-subtitle hero-subtitle-animated" data-i18n="heroSubtitle">
-                    Trend è una piattaforma di previsione dei mercati finanziari che sfrutta la gamification per validare l'accuratezza degli utenti. Ogni utente formula previsioni su asset azionari e crypto, monitora le performance e ottiene punteggi reputazionali in base alla precisione. Nessuna operatività diretta, solo signal e competizione.
-                </p>
-                <div class="hero-cta hero-cta-animated">
-                    <a href="about.html" class="primary-button glow-effect" data-i18n="discoverTrend">Scopri Trend</a>
-                    <a href="demo.html" class="secondary-button" data-i18n="requestDemo">Richiedi Demo</a>
-                </div>
-            </div>
             </section>
             <!-- How It Works Section -->
               <section class="how-it-works-scroll" id="how-it-works">
@@ -229,21 +211,7 @@
                 </div>
             </section> -->
 
-            <!-- Email Signup Section -->
-            <section class="email-signup" id="email-signup">
-                <div class="container">
-                    <h2 data-i18n="emailTitle">Vuoi ricevere aggiornamenti in anteprima?</h2>
-                    <form class="signup-form" id="signupForm">
-                        <div class="input-group">
-                            <input type="email" id="signupEmail" data-i18n-placeholder="emailPlaceholder" placeholder="Il tuo indirizzo email" required>
-                            <button type="submit" class="primary-button glow-effect" data-i18n="subscribe">Iscriviti</button>
-                        </div>
-                        <div id="signupMessage" class="demo-message" style="display: none;" data-i18n="demoThankYou">
-                            Grazie per la richiesta! Ti contatteremo il prima possibile.
-                        </div>
-                    </form>
-                </div>
-            </section>
+          
 
             <!-- Roadmap Timeline -->
             <section class="roadmap_section">
@@ -332,34 +300,11 @@
                 </div>
              </div>
             </section>
-
-            <!-- <div class="hero-image">
-                <svg width="100%" height="100%" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:0.2"/>
-                            <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:0.2"/>
-                        </linearGradient>
-                    </defs>
-                    <!-- App Window Frame -->
-                    <rect x="50" y="50" width="700" height="500" rx="16" 
-                          fill="rgba(30, 30, 30, 0.9)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
-                    <path d="M100 400 L200 300 L300 350 L400 200 L500 250 L600 150" 
-                          stroke="#4F46E5" stroke-width="3" fill="none"/>
-                    <rect x="100" y="100" width="200" height="100" rx="8" 
-                          fill="url(#cardGradient)" stroke="rgba(255, 255, 255, 0.1)"/>
-                    <rect x="350" y="100" width="200" height="100" rx="8" 
-                          fill="url(#cardGradient)" stroke="rgba(255, 255, 255, 0.1)"/>
-                    <rect x="100" y="450" width="600" height="50" rx="8" 
-                          fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255, 255, 255, 0.1)"/>
-                </svg>
-            </div>  -->
         </div>
     </section>
 
     <!-- Social Carousel Section -->
     <section class="social-carousel-section">
-      
             <h2 class="social-carousel-title" data-i18n="socialTitle">Seguici sui social</h2>
             <div class="social-carousel-container">
                 <div class="social-carousel" id="socialCarousel">
@@ -526,6 +471,22 @@
         </div>
     </section>
 
+      <!-- Email Signup Section -->
+    <section class="email-signup" id="email-signup">
+        <div class="container">
+            <h2 data-i18n="emailTitle">Vuoi ricevere aggiornamenti in anteprima?</h2>
+            <form class="signup-form" id="signupForm">
+                <div class="input-group">
+                    <input type="email" id="signupEmail" data-i18n-placeholder="emailPlaceholder" placeholder="Il tuo indirizzo email" required>
+                    <button type="submit" class="primary-button glow-effect" data-i18n="subscribe">Iscriviti</button>
+                </div>
+                <div id="signupMessage" class="demo-message" style="display: none;" data-i18n="demoThankYou">
+                    Grazie per la richiesta! Ti contatteremo il prima possibile.
+                </div>
+            </form>
+        </div>
+    </section>
+
     <!-- Footer -->
      <footer class="footer">
       <div class="container">
@@ -583,6 +544,34 @@
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+  let lastScrollY = window.scrollY;
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const currentScroll = window.scrollY;
+      const scrollingUp = currentScroll < lastScrollY;
+      lastScrollY = currentScroll;
+
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+      } else {
+        // Only remove if scrolling UP (leaving section from top)
+        if (scrollingUp) {
+          entry.target.classList.remove("in-view");
+        }
+      }
+    });
+  }, {
+    threshold: 0.4
+  });
+
+  const targetSection = document.querySelector('.zoom-section');
+  if (targetSection) sectionObserver.observe(targetSection);
+</script>
+
+
+
 
 <script>
   gsap.registerPlugin(ScrollTrigger);
