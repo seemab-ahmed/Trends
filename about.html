@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Trend</title>
+    <meta name="description" content="Scopri cos'è Trend: la piattaforma che cambia il paradigma dei mercati finanziari premiando le intuizioni, non il capitale.">
+    <meta name="keywords" content="trend, about, piattaforma, mercati finanziari, previsioni">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/test.svg">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Video -->
+    <div class="hero-background">
+        <video autoplay muted loop playsinline>
+            <source src="./assets/trend-bg.mp4" type="video/mp4">
+        </video>
+        <div class="hero-gradient"></div>
+    </div>
+
+    <!-- Header Navigation -->
+    <nav class="nav">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="nav-logo">
+                <h1 class="gradient-text">Trend</h1>
+            </a>
+            <div class="nav-links">
+                <a href="about.html" class="nav-link active" data-i18n="trendIntro">Cos'è Trend</a>
+                <a href="invest.html" class="nav-link" data-i18n="investOpportunity">Opportunità di investimento</a>
+                <a href="collaborate.html" class="nav-link" data-i18n="joinUs">Collabora con noi</a>
+                <a href="team.html" class="nav-link" data-i18n="ourTeam">Il nostro Team</a>
+            </div>
+            <div class="nav-right">
+                <a href="index.html#email-signup" class="nav-cta glow-effect" data-i18n="joinBeta">Join Beta</a>
+                <div class="lang-switch">
+                    <span class="lang-option" data-lang="it">IT</span>
+                    <span class="lang-separator">|</span>
+                    <span class="lang-option" data-lang="en">EN</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-progress">
+            <div class="scroll-progress-bar"></div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="page-content">
+        <div class="container">
+            <h1 class="page-title gradient-text" data-i18n="aboutTitle">Cos'è Trend</h1>
+            
+            <!-- Il problema -->
+            <section class="content-section fade-section">
+                <div class="container">
+                    <h2 class="section-title" data-i18n="problemTitle">Il problema</h2>
+                    <p class="section-text" data-i18n="problemText">
+                        Oggi le piattaforme premiano chi ha più soldi da investire, non chi ha buone intuizioni. Trend cambia questo paradigma.
+                    </p>
+                </div>
+            </section>
+
+            <!-- La soluzione Trend -->
+            <section class="content-section fade-section">
+                <div class="container">
+                    <h2 class="section-title" data-i18n="solutionTitle">La soluzione Trend</h2>
+                    <p class="section-text" data-i18n="solutionText">
+                        Ogni utente può fare previsioni su azioni e criptovalute. La precisione viene tracciata e premiata con punti, badge e visibilità in classifica. Nessun rischio di capitale, nessuna operatività: solo la tua capacità.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Come funziona -->
+            <section class="content-section fade-section">
+                <div class="container">
+                    <h2 class="section-title" data-i18n="howItWorksTitle">Come funziona</h2>
+                    <p class="section-text" data-i18n="howItWorksText">
+                        Fai una previsione → Monitora → Scala la classifica. Il tutto in un ambiente trasparente, tracciabile e senza commissioni.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Perché è diverso -->
+            <section class="content-section fade-section">
+                <div class="container">
+                    <h2 class="section-title" data-i18n="whyDifferentTitle">Perché è diverso</h2>
+                    <p class="section-text" data-i18n="whyDifferentText">
+                        Trend non è un social, non è un broker e non è un simulatore: è un sistema reputazionale basato sull'accuratezza. I migliori ottengono visibilità, vantaggi, accesso a funzioni avanzate e in futuro compensi.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-bottom">
+                <p data-i18n="footerRights">&copy; 2024 Trend. Tutti i diritti riservati.</p>
+            </div>
+            <p class="footer-disclaimer" data-i18n="footerDisclaimer">
+                © 2024 Trend. Tutti i diritti riservati. I contenuti presenti su questo sito, inclusi testi, immagini, loghi e grafiche, sono protetti da copyright e non possono essere copiati, riprodotti o distribuiti senza autorizzazione scritta. Le informazioni fornite non costituiscono consulenza finanziaria. L'utilizzo della piattaforma implica l'accettazione dei termini e delle condizioni.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Fade in sections on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.fade-section');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const sectionObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Stop observing once visible
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                sectionObserver.observe(section);
+            });
+        });
+    </script>
+</body>
+</html> 

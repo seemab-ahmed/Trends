@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richiedi Demo - Trend</title>
+    <meta name="description" content="Richiedi una demo di Trend e scopri come funziona la piattaforma di previsioni sui mercati finanziari.">
+    <meta name="keywords" content="demo, trend, richiesta, preview, anteprima">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/test.svg">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <nav class="nav">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="nav-logo">
+                <h1 class="gradient-text">Trend</h1>
+            </a>
+            <div class="nav-links">
+                <a href="about.html" class="nav-link" data-i18n="trendIntro">Cos'è Trend</a>
+                <a href="invest.html" class="nav-link" data-i18n="investOpportunity">Opportunità di investimento</a>
+                <a href="collaborate.html" class="nav-link" data-i18n="joinUs">Collabora con noi</a>
+                <a href="team.html" class="nav-link" data-i18n="ourTeam">Il nostro Team</a>
+            </div>
+            <div class="nav-right">
+                <a href="index.html#email-signup" class="nav-cta glow-effect" data-i18n="joinBeta">Join Beta</a>
+                <div class="lang-switch">
+                    <span class="lang-option" data-lang="it">IT</span>
+                    <span class="lang-separator">|</span>
+                    <span class="lang-option" data-lang="en">EN</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-progress">
+            <div class="scroll-progress-bar"></div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="page-content">
+        <div class="container">
+            <div class="demo-section">
+                <h1 class="page-title gradient-text" data-i18n="demoTitle">Richiedi una demo</h1>
+                <p class="demo-intro" data-i18n="demoIntro">Inserisci il tuo indirizzo email per essere ricontattato dal team di Trend.</p>
+                
+                <form class="demo-form" id="demoForm">
+                    <div class="input-group">
+                        <input type="email" id="demoEmail" data-i18n-placeholder="demoEmailPlaceholder" placeholder="La tua email" required>
+                        <button type="submit" class="primary-button glow-effect" data-i18n="demoSubmit">Invia richiesta</button>
+                    </div>
+                    <div id="demoMessage" class="demo-message" style="display: none;" data-i18n="demoThankYou">
+                        Grazie per la richiesta! Ti contatteremo il prima possibile.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-bottom">
+                <p data-i18n="footerRights">&copy; 2024 Trend. Tutti i diritti riservati.</p>
+            </div>
+            <p class="footer-disclaimer" data-i18n="footerDisclaimer">
+                © 2024 Trend. Tutti i diritti riservati. I contenuti presenti su questo sito, inclusi testi, immagini, loghi e grafiche, sono protetti da copyright e non possono essere copiati, riprodotti o distribuiti senza autorizzazione scritta. Le informazioni fornite non costituiscono consulenza finanziaria. L'utilizzo della piattaforma implica l'accettazione dei termini e delle condizioni.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
