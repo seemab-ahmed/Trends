@@ -218,86 +218,46 @@
              <div class="roadmap-timeline">
                 <!-- Completed Section -->
                 <div class="timeline-section completed">
-                    <div class="timeline-header">
-                        <h3 data-i18n="roadmapCompletedTitle">Completato</h3>
-                    </div>
                     <div class="timeline-items">
                         <div class="timeline-item" data-aos="fade-up">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content timeline1">
-                                <p class="mark-text">01</p>
+                                <div class="icon-img"><img src="/Images/icon1.png" alt="icon"></div>
                                 <h4 data-i18n="roadmapValidationTitle">Validazione idea e community</h4>
                                 <p data-i18n="roadmapValidationDesc">Abbiamo raccolto feedback da centinaia di utenti e investitori per testare il concetto di Trend.</p>
-                            </div>
+                            
                         </div>
                         <div class="timeline-item" data-aos="fade-up">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content timeline2">
-                                 <p class="mark-text">02</p>
+                                <div class="icon-img"><img src="/Images/icon2.png" alt="icon"></div>
                                 <h4 data-i18n="roadmapLandingTitle">Landing page MVP</h4>
                                 <p data-i18n="roadmapLandingDesc">Online la prima versione del sito, con supporto multilingua e struttura espandibile.</p>
-                            </div>
+                            
                         </div>
-                    </div>
-                </div>
-
-                <!-- In Progress Section -->
-                <div class="timeline-section in-progress">
-                    <div class="timeline-header">
-                        <h3 data-i18n="roadmapInProgressTitle">In corso</h3>
-                    </div>
-                    <div class="timeline-items">
-                        <div class="timeline-item" data-aos="fade-up">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content timeline3">
-                                 <p class="mark-text">03</p>
+                          <div class="timeline-item" data-aos="fade-up">
+                                <div class="icon-img"><img src="/Images/icon3.png" alt="icon"></div>
                                 <h4 data-i18n="roadmapMvpTitle">MVP funzionante (sandbox)</h4>
                                 <p data-i18n="roadmapMvpDesc">Il prototipo attuale mostra la struttura finale ma non è ancora interattivo: puoi esplorare l'interfaccia, ma non inserire previsioni.</p>
-                            </div>
+                            
                         </div>
                         <div class="timeline-item" data-aos="fade-up">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content timeline4">
-                                 <p class="mark-text">04</p>
+                               <div class="icon-img"><img src="/Images/icon2.png" alt="icon"></div>
                                 <h4 data-i18n="roadmapPredictionTitle">Sistema di previsioni</h4>
                                 <p data-i18n="roadmapPredictionDesc">Costruzione del modulo che permetterà agli utenti di inviare previsioni su azioni e crypto.</p>
-                            </div>
+                            
+                        </div>
+                         <div class="timeline-item" data-aos="fade-up">
+                               <div class="icon-img"><img src="/Images/icon3.png" alt="icon"></div>
+                                <h4 data-i18n="roadmapAccountTitle">Account utente & profilo</h4>
+                                <p data-i18n="roadmapAccountDesc">Creazione dei profili personali, storico previsioni e reputazione visibile.</p>
+                            
+                        </div>
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="icon-img"><img src="/Images/icon1.png" alt="icon"></div>
+                                <h4 data-i18n="roadmapMobileTitle">Mobile-first design</h4>
+                                <p data-i18n="roadmapMobileDesc">Ottimizzazione totale per smartphone e PWA per uso da browser mobile.</p>
+                            
                         </div>
                     </div>
                 </div>
 
-                <!-- Future Steps Section -->
-                <div class="timeline-section future">
-                    <div class="timeline-header">
-                        <h3 data-i18n="roadmapFutureTitle">Prossimi step</h3>
-                    </div>
-                    <div class="timeline-items">
-                        <div class="timeline-item" data-aos="fade-up">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content timeline5">
-                                 <p class="mark-text">05</p>
-                                <h4 data-i18n="roadmapAccountTitle">Account utente & profilo</h4>
-                                <p data-i18n="roadmapAccountDesc">Creazione dei profili personali, storico previsioni e reputazione visibile.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item" data-aos="fade-up">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content timeline6">
-                                 <p class="mark-text">06</p>
-                                <h4 data-i18n="roadmapMobileTitle">Mobile-first design</h4>
-                                <p data-i18n="roadmapMobileDesc">Ottimizzazione totale per smartphone e PWA per uso da browser mobile.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item" data-aos="fade-up">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content timeline7">
-                                 <p class="mark-text">07</p>
-                                <h4 data-i18n="roadmapNotificationsTitle">Notifiche e aggiornamenti</h4>
-                                <p data-i18n="roadmapNotificationsDesc">Avvisi automatici su esito delle previsioni e posizionamento in classifica.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
              </div>
             </section>
         </div>
@@ -572,42 +532,69 @@
 
 
 
-
 <script>
   gsap.registerPlugin(ScrollTrigger);
 
-  const steps = gsap.utils.toArray(".scroll-step");
-  const offset = 30; // px gap between stacked cards
+  function initScrollSteps() {
+    const steps = gsap.utils.toArray(".scroll-step");
+    const offset = 20; // px gap between stacked cards
 
-  steps.forEach((step, i) => {
-    const yValue = -(50 - (i * (offset / 2)));
-    const startValue = `${i * window.innerHeight * 0.5} top`;
-    const endValue = `${(i + 1) * window.innerHeight * 0.5} top`;
+    steps.forEach((step, i) => {
+      const screenWidth = window.innerWidth;
 
-    gsap.set(step, {
-      zIndex: i + 1
-    });
-
-    gsap.to(step, {
-      opacity: 1,
-      y: `${yValue}%`,
-      scrollTrigger: {
-        trigger: ".how-it-works-scroll",
-        start: startValue,
-        end: endValue,
-        scrub: true,
+      // Responsive translateY percentage
+      let yMultiplier = 40;
+      if (screenWidth <= 480) {
+        yMultiplier = 50; // extra shift on very small screens
+      } else if (screenWidth <= 768) {
+        yMultiplier = 45;
       }
-    });
-  });
 
-  ScrollTrigger.create({
-    trigger: ".how-it-works-scroll",
-    start: "top top",
-    end: () => "+=" + (steps.length * window.innerHeight * 0.5),
-    pin: true,
-    scrub: true,
+      // Calculate individual y based on step index
+      const yValue = -(yMultiplier - (i * (offset / 2)));
+
+      const startValue = `${i * window.innerHeight * 0.5} top`;
+      const endValue = `${(i + 1) * window.innerHeight * 0.5} top`;
+
+      gsap.set(step, {
+        zIndex: i + 1
+      });
+
+      gsap.to(step, {
+        opacity: 1,
+        y: `${yValue}%`,
+        scrollTrigger: {
+          trigger: ".how-it-works-scroll",
+          start: startValue,
+          end: endValue,
+          scrub: true,
+        }
+      });
+    });
+
+    // Pin the entire section
+    ScrollTrigger.create({
+      trigger: ".how-it-works-scroll",
+      start: "top top",
+      end: () => "+=" + (steps.length * window.innerHeight * 0.5),
+      pin: true,
+      scrub: true,
+    });
+  }
+
+  // Call on page load
+  initScrollSteps();
+
+  // Reinitialize on resize
+  window.addEventListener("resize", () => {
+    // Kill existing triggers
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+
+    // Re-run the scroll animation with updated sizes
+    initScrollSteps();
   });
 </script>
+
 
 </body>
 </html> 
