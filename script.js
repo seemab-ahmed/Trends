@@ -751,11 +751,8 @@ async function handleDemoSubmit(event) {
 
 // Funzione per inizializzare le animazioni hero
 function initHeroAnimations() {
-    // Verifica se l'utente preferisce ridurre le animazioni
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
     if (prefersReducedMotion) {
-        // Se l'utente preferisce animazioni ridotte, mostra tutto immediatamente
         const heroElements = document.querySelectorAll('.hero-title-animated, .hero-subtitle-animated, .hero-cta-animated');
         heroElements.forEach(element => {
             element.style.opacity = '1';
@@ -763,8 +760,6 @@ function initHeroAnimations() {
             element.style.animation = 'none';
         });
     }
-    
-    // Le animazioni CSS si attiveranno automaticamente al caricamento
 }
 
 // simple faq js
