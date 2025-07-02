@@ -1,56 +1,64 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trend - Il tuo radar sui mercati</title>
-    <meta name="description" content="Trend è una piattaforma di previsione dei mercati finanziari che sfrutta la gamification per validare l'accuratezza degli utenti. Fai previsioni su azioni e crypto, monitora le performance e scala la classifica.">
+    <meta name="description"
+        content="Trend è una piattaforma di previsione dei mercati finanziari che sfrutta la gamification per validare l'accuratezza degli utenti. Fai previsioni su azioni e crypto, monitora le performance e scala la classifica.">
     <meta name="keywords" content="trading, previsioni, mercati finanziari, crypto, azioni, gamification, fintech">
     <meta name="author" content="Trend">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://trend-app.vercel.app/">
     <meta property="og:title" content="Trend - Il tuo radar sui mercati">
-    <meta property="og:description" content="Piattaforma di previsione dei mercati finanziari con gamification. Fai previsioni su azioni e crypto, monitora le performance e scala la classifica.">
+    <meta property="og:description"
+        content="Piattaforma di previsione dei mercati finanziari con gamification. Fai previsioni su azioni e crypto, monitora le performance e scala la classifica.">
     <meta property="og:image" content="https://trend-app.vercel.app/assets/guru-forex-trading-1024x683.jpg">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://trend-app.vercel.app/">
     <meta property="twitter:title" content="Trend - Il tuo radar sui mercati">
-    <meta property="twitter:description" content="Piattaforma di previsione dei mercati finanziari con gamification. Fai previsioni su azioni e crypto, monitora le performance e scala la classifica.">
+    <meta property="twitter:description"
+        content="Piattaforma di previsione dei mercati finanziari con gamification. Fai previsioni su azioni e crypto, monitora le performance e scala la classifica.">
     <meta property="twitter:image" content="https://trend-app.vercel.app/assets/guru-forex-trading-1024x683.jpg">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/test.svg">
-    
-    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
+
+<body> 
+    <!-- cursor dots -->
+    <div class="cursor-dot-outline"></div>
+    <div class="cursor-dot"></div>
     <!-- Header Navigation -->
     <nav class="nav">
         <div class="container nav-wrapper">
             <a href="index.html" class="nav-logo">
                 <h1 class="gradient-text">Trend</h1>
             </a>
-           
+
             <div class="nav-links">
-                 <button class="close-icon" id="closeToggle"> ✕ </button>
+                <button class="close-icon" id="closeToggle"> ✕ </button>
                 <a href="about.html" class="nav-link" data-i18n="trendIntro">Cos'è Trend</a>
                 <a href="invest.html" class="nav-link" data-i18n="investOpportunity">Opportunità di investimento</a>
                 <a href="collaborate.html" class="nav-link" data-i18n="joinUs">Collabora con noi</a>
                 <a href="team.html" class="nav-link" data-i18n="ourTeam">Il nostro Team</a>
                 <a href="#email-signup" class="nav-cta glow-effect" data-i18n="joinBeta">Join Beta</a>
             </div>
-            
+
             <div class="nav-right">
                 <button class="nav-toggle" id="navToggle">
-                  <p id="toggleIcon">☰</p>
+                    <p id="toggleIcon">☰</p>
                 </button>
                 <a href="#email-signup" class="nav-cta mbtn glow-effect" data-i18n="joinBeta">Join Beta</a>
                 <div class="lang-switch">
@@ -64,92 +72,147 @@
             <div class="scroll-progress-bar"></div>
         </div>
     </nav>
-    <section class="vedio-section">
+    <section class="banner">
+        <div class="container">
+            <div class="banner-inner">
+                <!-- <div class="banner-left"> -->
+                    <span class="eyebrow">Previsioni finanziarie, gamification e reputazione</span>
+                    <h1 class="banner-heading" data-i18n="heroTitle">Trend: il tuo radar sui mercati</h1>
+                    <p class="banner-para" data-i18n="heroSubtitle">
+                        Trend è una piattaforma di previsione dei mercati finanziari che sfrutta la gamification per
+                        validare l'accuratezza degli utenti. Ogni utente formula previsioni su asset azionari e crypto,
+                        monitora le performance e ottiene punteggi reputazionali in base alla precisione. Nessuna
+                        operatività diretta, solo signal e competizione.
+                    </p>
+                    <div class="btn-row">
+                        <!-- <a href="about.html" class="primary-button glow-effect" data-i18n="discoverTrend"></a> -->
+                        <a href="about.html" class="button">
+                            <span data-i18n="discoverTrend">Scopri Trend</span>
+                            <div class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M13.5303 5.53033C13.8232 5.23744 13.8232 4.76256 13.5303 4.46967L9.53033 0.46967C9.23744 0.176777 8.76256 0.176777 8.46967 0.46967C8.17678 0.762563 8.17678 1.23744 8.46967 1.53033L11.1893 4.25H1C0.585787 4.25 0.25 4.58579 0.25 5C0.25 5.41421 0.585787 5.75 1 5.75H11.1893L8.46967 8.46967C8.17678 8.76256 8.17678 9.23744 8.46967 9.53033C8.76256 9.82322 9.23744 9.82322 9.53033 9.53033L13.5303 5.53033Z"
+                                    fill="currentColor">
+                                </path>
+                            </svg>
+                            </div>
+                            <div class="btn-bg"></div>
+                        </a>
+                        <a href="demo.html" class="button white">
+                            <span data-i18n="requestDemo">Richiedi Demo</span>
+                            <div class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M13.5303 5.53033C13.8232 5.23744 13.8232 4.76256 13.5303 4.46967L9.53033 0.46967C9.23744 0.176777 8.76256 0.176777 8.46967 0.46967C8.17678 0.762563 8.17678 1.23744 8.46967 1.53033L11.1893 4.25H1C0.585787 4.25 0.25 4.58579 0.25 5C0.25 5.41421 0.585787 5.75 1 5.75H11.1893L8.46967 8.46967C8.17678 8.76256 8.17678 9.23744 8.46967 9.53033C8.76256 9.82322 9.23744 9.82322 9.53033 9.53033L13.5303 5.53033Z"
+                                    fill="currentColor">
+                                </path>
+                            </svg>
+                            </div>
+                            <div class="btn-bg"></div>
+                        </a>
+                    </div>
+                <!-- </div> -->
+                <div class="banner-vid">
+                    <video autoplay muted loop playsinline>
+                        <source src="./assets/trend-bg.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="vedio-section">
         <div class="hero-background">
                     <video autoplay muted loop playsinline>
                         <source src="./assets/trend-bg.mp4" type="video/mp4">
                     </video>
                     <div class="hero-gradient"></div>
         </div>
-    </section>
+    </section> -->
     <!-- Hero Section -->
     <section class="hero">
         <div class="main_wrapper">
-             <section class="hero_section zoom-section">
+            <!-- <section class="hero_section zoom-section">
                 <div class="hero-content">
                     <h1 class="hero-title " data-i18n="heroTitle">Trend: il tuo radar sui mercati</h1>
                     <p class="hero-subtitle " data-i18n="heroSubtitle">
-                        Trend è una piattaforma di previsione dei mercati finanziari che sfrutta la gamification per validare l'accuratezza degli utenti. Ogni utente formula previsioni su asset azionari e crypto, monitora le performance e ottiene punteggi reputazionali in base alla precisione. Nessuna operatività diretta, solo signal e competizione.
+                        Trend è una piattaforma di previsione dei mercati finanziari che sfrutta la gamification per
+                        validare l'accuratezza degli utenti. Ogni utente formula previsioni su asset azionari e crypto,
+                        monitora le performance e ottiene punteggi reputazionali in base alla precisione. Nessuna
+                        operatività diretta, solo signal e competizione.
                     </p>
                     <div class="hero-cta">
-                        <a href="about.html" class="primary-button glow-effect" data-i18n="discoverTrend">Scopri Trend</a>
+                        <a href="about.html" class="primary-button glow-effect" data-i18n="discoverTrend">Scopri
+                            Trend</a>
                         <a href="demo.html" class="secondary-button" data-i18n="requestDemo">Richiedi Demo</a>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- How It Works Section -->
-              <section class="how-it-works-scroll" id="how-it-works">
-                    <div class="scroll-heading">
-                        <h2 class="scroll-title" data-i18n="howItWorksTitle" data-aos="fade-up" data-aos-duration="2000">Come Funziona</h2>
-                    </div>
-                    <div class="scroll-step-container">
-                        
-                        <div class="scroll-step" >
+            <section class="how-it-works-scroll" id="how-it-works">
+                <div class="scroll-heading">
+                    <h2 class="scroll-title" data-i18n="howItWorksTitle" data-aos="fade-up" data-aos-duration="2000">
+                        Come Funziona</h2>
+                </div>
+                <div class="scroll-step-container">
+
+                    <div class="scroll-step">
                         <div class="scroll-step-content step1">
                             <div class="text-box">
-                            <h3 data-i18n="step1Title">Fai una previsione</h3>
-                            <p>
-                                Scegli un asset tra azioni o crypto.
-                                Decidi se salirà o scenderà nel tempo.
-                                Imposta un orizzonte: da 1 ora a 1 anno.
-                                Aggiungi una percentuale attesa.
-                                Invia la tua previsione in pochi secondi.
-                            </p>
+                                <h3 data-i18n="step1Title">Fai una previsione</h3>
+                                <p>
+                                    Scegli un asset tra azioni o crypto.
+                                    Decidi se salirà o scenderà nel tempo.
+                                    Imposta un orizzonte: da 1 ora a 1 anno.
+                                    Aggiungi una percentuale attesa.
+                                    Invia la tua previsione in pochi secondi.
+                                </p>
                             </div>
                             <div class="img-box">
-                            <img src="/Images/card1.png" alt="Step 1">
+                                <img src="/Images/card1.png" alt="Step 1">
                             </div>
                         </div>
-                        </div>
+                    </div>
 
-                        <div class="scroll-step" >
+                    <div class="scroll-step">
                         <div class="scroll-step-content step2">
                             <div class="text-box">
-                            <h3 data-i18n="step2Title">Monitora l'esito</h3>
-                            <p data-i18n="step2Desc">
-                                Ogni previsione viene tracciata live.
-                                Puoi vedere l'andamento e la performance.
-                                Hai sempre accesso al tuo storico.
-                                Più sei accurato, più guadagni reputazione.
-                                Tutto è visibile e aggiornato in tempo reale.
-                            </p>
+                                <h3 data-i18n="step2Title">Monitora l'esito</h3>
+                                <p data-i18n="step2Desc">
+                                    Ogni previsione viene tracciata live.
+                                    Puoi vedere l'andamento e la performance.
+                                    Hai sempre accesso al tuo storico.
+                                    Più sei accurato, più guadagni reputazione.
+                                    Tutto è visibile e aggiornato in tempo reale.
+                                </p>
                             </div>
                             <div class="img-box">
-                            <img src="/Images/card2.png" alt="Step 2">
+                                <img src="/Images/card2.png" alt="Step 2">
                             </div>
                         </div>
-                        </div>
+                    </div>
 
-                        <div class="scroll-step" >
+                    <div class="scroll-step">
                         <div class="scroll-step-content step3">
                             <div class="text-box">
-                            <h3 data-i18n="step3Title">Scala la classifica</h3>
-                            <p data-i18n="step2Desc">
-                                Ottieni un punteggio per ogni previsione.
-                                I migliori entrano nel ranking mensile.
-                                Sfida gli altri utenti con le tue intuizioni.
-                                Più precisione = più visibilità.
-                                Diventa un top predictor e costruisci credibilità.
-                            </p>
+                                <h3 data-i18n="step3Title">Scala la classifica</h3>
+                                <p data-i18n="step2Desc">
+                                    Ottieni un punteggio per ogni previsione.
+                                    I migliori entrano nel ranking mensile.
+                                    Sfida gli altri utenti con le tue intuizioni.
+                                    Più precisione = più visibilità.
+                                    Diventa un top predictor e costruisci credibilità.
+                                </p>
                             </div>
                             <div class="img-box">
-                            <img src="/Images/card1.png" alt="Step 3">
+                                <img src="/Images/card1.png" alt="Step 3">
                             </div>
                         </div>
-                        </div>
-
                     </div>
-              </section>
+
+                </div>
+            </section>
             <!-- <section class="how-it-works-scroll container" id="how-it-works">
                 <div class="scroll-title">
                     <h2 class="section-title" data-i18n="howItWorksTitle">Come Funziona</h2>
@@ -214,132 +277,142 @@
 
             <!-- Roadmap Timeline -->
             <section class="roadmap_section">
-             <div class="roadmap-timeline">
-                <!-- Completed Section -->
-                <div class="timeline-section completed">
-                    <div class="timeline-items">
-                        <div class="timeline-item" data-aos="fade-right" data-aos-duration="2000">
+                <div class="roadmap-timeline">
+                    <!-- Completed Section -->
+                    <div class="timeline-section completed">
+                        <div class="timeline-items">
+                            <div class="timeline-item" data-aos="fade-right" data-aos-duration="2000">
                                 <div class="icon-img"><img src="/Images/icon1.png" alt="icon"></div>
                                 <h4 data-i18n="roadmapValidationTitle">Validazione idea e community</h4>
-                                <p data-i18n="roadmapValidationDesc">Abbiamo raccolto feedback da centinaia di utenti e investitori per testare il concetto di Trend.</p>
-                        </div>
-                        <div class="timeline-item"  data-aos="fade-up" data-aos-duration="2000">
+                                <p data-i18n="roadmapValidationDesc">Abbiamo raccolto feedback da centinaia di utenti e
+                                    investitori per testare il concetto di Trend.</p>
+                            </div>
+                            <div class="timeline-item" data-aos="fade-up" data-aos-duration="2000">
                                 <div class="icon-img"><img src="/Images/icon2.png" alt="icon"></div>
                                 <h4 data-i18n="roadmapLandingTitle">Landing page MVP</h4>
-                                <p data-i18n="roadmapLandingDesc">Online la prima versione del sito, con supporto multilingua e struttura espandibile.</p>
-                            
-                        </div>
-                          <div class="timeline-item" data-aos="fade-left" data-aos-duration="2000"">
-                                <div class="icon-img"><img src="/Images/icon3.png" alt="icon"></div>
-                                <h4 data-i18n="roadmapMvpTitle">MVP funzionante (sandbox)</h4>
-                                <p data-i18n="roadmapMvpDesc">Il prototipo attuale mostra la struttura finale ma non è ancora interattivo: puoi esplorare l'interfaccia, ma non inserire previsioni.</p>
-                            
+                                <p data-i18n="roadmapLandingDesc">Online la prima versione del sito, con supporto
+                                    multilingua e struttura espandibile.</p>
+
+                            </div>
+                            <div class="timeline-item" data-aos="fade-left" data-aos-duration="2000"">
+                                <div class=" icon-img"><img src="/Images/icon3.png" alt="icon"></div>
+                            <h4 data-i18n="roadmapMvpTitle">MVP funzionante (sandbox)</h4>
+                            <p data-i18n="roadmapMvpDesc">Il prototipo attuale mostra la struttura finale ma non è
+                                ancora interattivo: puoi esplorare l'interfaccia, ma non inserire previsioni.</p>
+
                         </div>
                         <div class="timeline-item" data-aos="fade-right" data-aos-duration="2000">
-                               <div class="icon-img"><img src="/Images/icon2.png" alt="icon"></div>
-                                <h4 data-i18n="roadmapPredictionTitle">Sistema di previsioni</h4>
-                                <p data-i18n="roadmapPredictionDesc">Costruzione del modulo che permetterà agli utenti di inviare previsioni su azioni e crypto.</p>
-                            
+                            <div class="icon-img"><img src="/Images/icon2.png" alt="icon"></div>
+                            <h4 data-i18n="roadmapPredictionTitle">Sistema di previsioni</h4>
+                            <p data-i18n="roadmapPredictionDesc">Costruzione del modulo che permetterà agli utenti di
+                                inviare previsioni su azioni e crypto.</p>
+
                         </div>
-                         <div class="timeline-item" data-aos="fade-up" data-aos-duration="2000">
-                               <div class="icon-img"><img src="/Images/icon3.png" alt="icon"></div>
-                                <h4 data-i18n="roadmapAccountTitle">Account utente & profilo</h4>
-                                <p data-i18n="roadmapAccountDesc">Creazione dei profili personali, storico previsioni e reputazione visibile.</p>
-                            
+                        <div class="timeline-item" data-aos="fade-up" data-aos-duration="2000">
+                            <div class="icon-img"><img src="/Images/icon3.png" alt="icon"></div>
+                            <h4 data-i18n="roadmapAccountTitle">Account utente & profilo</h4>
+                            <p data-i18n="roadmapAccountDesc">Creazione dei profili personali, storico previsioni e
+                                reputazione visibile.</p>
+
                         </div>
                         <div class="timeline-item" data-aos="fade-left" data-aos-duration="2000">
                             <div class="icon-img"><img src="/Images/icon1.png" alt="icon"></div>
-                                <h4 data-i18n="roadmapMobileTitle">Mobile-first design</h4>
-                                <p data-i18n="roadmapMobileDesc">Ottimizzazione totale per smartphone e PWA per uso da browser mobile.</p>
-                            
+                            <h4 data-i18n="roadmapMobileTitle">Mobile-first design</h4>
+                            <p data-i18n="roadmapMobileDesc">Ottimizzazione totale per smartphone e PWA per uso da
+                                browser mobile.</p>
+
                         </div>
                     </div>
                 </div>
 
-             </div>
-            </section>
         </div>
+    </section>
+    </div>
     </section>
 
     <!-- Social Carousel Section -->
     <section class="social-carousel-section">
-            <h2 class="social-carousel-title" data-i18n="socialTitle" data-aos="fade-up" data-aos-duration="2000">Seguici sui social</h2>
-            <div class="social-carousel-container">
-                <div class="social-carousel" id="socialCarousel">
-                    <div class="social-cards-container">
-                        <!-- LinkedIn -->
-                        <div class="social-card">
-                            <a href="https://linkedin.com/company/trend" target="_blank" rel="noopener">
-                                <img src="assets/icons8-facebook-color/icons8-linkedin.png" alt="LinkedIn">
-                            </a>
-                        </div>
-                        
-                        <!-- Telegram -->
-                        <div class="social-card">
-                            <a href="https://t.me/trend_official" target="_blank" rel="noopener">
-                                <img src="assets/icons8-facebook-color/icons8-telegram-app.png" alt="Telegram">
-                            </a>
-                        </div>
-                        
-                        <!-- Instagram -->
-                        <div class="social-card">
-                            <a href="https://instagram.com/trend_official" target="_blank" rel="noopener">
-                                <img src="assets/icons8-facebook-color/icons8-instagram.png" alt="Instagram">
-                            </a>
-                        </div>
-                        
-                        <!-- Twitter -->
-                        <div class="social-card">
-                            <a href="https://twitter.com/trend_official" target="_blank" rel="noopener">
-                                <img src="assets/icons8-facebook-color/icons8-twitter.png" alt="Twitter">
-                            </a>
-                        </div>
-                        
-                        <!-- TikTok -->
-                        <div class="social-card">
-                            <a href="https://tiktok.com/@trend_official" target="_blank" rel="noopener">
-                                <img src="assets/icons8-facebook-color/icons8-tiktok.png" alt="TikTok">
-                            </a>
-                        </div>
-                        
-                        <!-- Reddit -->
-                        <div class="social-card">
-                            <a href="https://reddit.com/r/trend" target="_blank" rel="noopener">
-                                <img src="assets/icons8-facebook-color/icons8-reddit.png" alt="Reddit">
-                            </a>
-                        </div>
-                        
-                        <!-- Facebook -->
-                        <div class="social-card">
-                            <a href="https://facebook.com/trend.official" target="_blank" rel="noopener">
-                                <img src="assets/icons8-facebook-color/icons8-facebook-144.png" alt="Facebook">
-                            </a>
-                        </div>
+        <h2 class="social-carousel-title" data-i18n="socialTitle" data-aos="fade-up" data-aos-duration="2000">Seguici
+            sui social</h2>
+        <div class="social-carousel-container">
+            <div class="social-carousel" id="socialCarousel">
+                <div class="social-cards-container">
+                    <!-- LinkedIn -->
+                    <div class="social-card">
+                        <a href="https://linkedin.com/company/trend" target="_blank" rel="noopener">
+                            <img src="assets/icons8-facebook-color/icons8-linkedin.png" alt="LinkedIn">
+                        </a>
                     </div>
-                    <div class="carousel-controls">
-                        <button class="carousel-control prev-btn" aria-label="Previous">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-                            </svg>
-                        </button>
-                        <button class="carousel-control next-btn" aria-label="Next">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-                            </svg>
-                        </button>
+
+                    <!-- Telegram -->
+                    <div class="social-card">
+                        <a href="https://t.me/trend_official" target="_blank" rel="noopener">
+                            <img src="assets/icons8-facebook-color/icons8-telegram-app.png" alt="Telegram">
+                        </a>
+                    </div>
+
+                    <!-- Instagram -->
+                    <div class="social-card">
+                        <a href="https://instagram.com/trend_official" target="_blank" rel="noopener">
+                            <img src="assets/icons8-facebook-color/icons8-instagram.png" alt="Instagram">
+                        </a>
+                    </div>
+
+                    <!-- Twitter -->
+                    <div class="social-card">
+                        <a href="https://twitter.com/trend_official" target="_blank" rel="noopener">
+                            <img src="assets/icons8-facebook-color/icons8-twitter.png" alt="Twitter">
+                        </a>
+                    </div>
+
+                    <!-- TikTok -->
+                    <div class="social-card">
+                        <a href="https://tiktok.com/@trend_official" target="_blank" rel="noopener">
+                            <img src="assets/icons8-facebook-color/icons8-tiktok.png" alt="TikTok">
+                        </a>
+                    </div>
+
+                    <!-- Reddit -->
+                    <div class="social-card">
+                        <a href="https://reddit.com/r/trend" target="_blank" rel="noopener">
+                            <img src="assets/icons8-facebook-color/icons8-reddit.png" alt="Reddit">
+                        </a>
+                    </div>
+
+                    <!-- Facebook -->
+                    <div class="social-card">
+                        <a href="https://facebook.com/trend.official" target="_blank" rel="noopener">
+                            <img src="assets/icons8-facebook-color/icons8-facebook-144.png" alt="Facebook">
+                        </a>
                     </div>
                 </div>
+                <div class="carousel-controls">
+                    <button class="carousel-control prev-btn" aria-label="Previous">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                        </svg>
+                    </button>
+                    <button class="carousel-control next-btn" aria-label="Next">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                        </svg>
+                    </button>
+                </div>
             </div>
-        
+        </div>
+
     </section>
 
     <!-- Kickstarter Section -->
     <section class="testimonials animate-on-scroll" id="kickstarter">
         <div class="section-background light"></div>
         <div class="container">
-            <h2 class="section-title" data-i18n="kickstarterTitle" data-aos="fade-left" data-aos-duration="2000">Sostienici su Kickstarter</h2>
-            <p class="kickstarter-intro" data-i18n="kickstarterIntro" data-aos="fade-right" data-aos-duration="2000">Trend è live su Kickstarter e ha già raccolto €1.400 dai primi sostenitori. Aiutaci a costruire il futuro della finanza predittiva!</p>
-            
+            <h2 class="section-title" data-i18n="kickstarterTitle" data-aos="fade-left" data-aos-duration="2000">
+                Sostienici su Kickstarter</h2>
+            <p class="kickstarter-intro" data-i18n="kickstarterIntro" data-aos="fade-right" data-aos-duration="2000">
+                Trend è live su Kickstarter e ha già raccolto €1.400 dai primi sostenitori. Aiutaci a costruire il
+                futuro della finanza predittiva!</p>
+
             <div class="progress-container">
                 <div class="progress-bar">
                     <div class="progress-fill" style="width: 26%"></div>
@@ -394,25 +467,28 @@
     <section class="faq animate-on-scroll faq-section" id="faq">
         <div class="section-background light"></div>
         <div class="container">
-            <h2 class="section-title" data-i18n="faqTitle" data-aos="fade-up" data-aos-duration="2000">Domande Frequenti</h2>
-               <div class="faq-grid">
-                  <div class="faq-item" data-aos="fade-up" data-aos-duration="2000">
+            <h2 class="section-title" data-i18n="faqTitle" data-aos="fade-up" data-aos-duration="2000">Domande Frequenti
+            </h2>
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up" data-aos-duration="2000">
                     <div class="faq-question">
                         <h3>Cosa rende Trend diverso da un'app di trading?</h3>
                         <p class="faq-icon">+</p>
                     </div>
                     <div class="faq-answer">
-                        <p>Trend non è un broker: non compri o vendi asset. Fai previsioni, guadagni reputazione e ti confronti con la community.</p>
+                        <p>Trend non è un broker: non compri o vendi asset. Fai previsioni, guadagni reputazione e ti
+                            confronti con la community.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item" data-aos="fade-up" data-aos-duration="2000">
                     <div class="faq-question">
                         <h3> È gratis?</h3>
                         <p class="faq-icon">+</p>
                     </div>
                     <div class="faq-answer">
-                        <p>Sì, la versione base è gratuita. In futuro saranno disponibili funzionalità premium opzionali.</p>
+                        <p>Sì, la versione base è gratuita. In futuro saranno disponibili funzionalità premium
+                            opzionali.</p>
                     </div>
                 </div>
 
@@ -422,20 +498,23 @@
                         <p class="faq-icon">+</p>
                     </div>
                     <div class="faq-answer">
-                        <p> No, Trend è pensata per essere accessibile a chiunque, anche a chi si avvicina per la prima volta ai mercati.</p>
+                        <p> No, Trend è pensata per essere accessibile a chiunque, anche a chi si avvicina per la prima
+                            volta ai mercati.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-      <!-- Email Signup Section -->
+    <!-- Email Signup Section -->
     <section class="email-signup" id="email-signup">
         <div class="container">
-            <h2 data-i18n="emailTitle" data-aos="fade-up" data-aos-duration="2000">Vuoi ricevere aggiornamenti in anteprima?</h2>
+            <h2 data-i18n="emailTitle" data-aos="fade-up" data-aos-duration="2000">Vuoi ricevere aggiornamenti in
+                anteprima?</h2>
             <form class="signup-form" id="signupForm">
                 <div class="input-group">
-                    <input type="email" id="signupEmail" data-i18n-placeholder="emailPlaceholder" placeholder="Il tuo indirizzo email" required>
+                    <input type="email" id="signupEmail" data-i18n-placeholder="emailPlaceholder"
+                        placeholder="Il tuo indirizzo email" required>
                     <button type="submit" class="primary-button glow-effect" data-i18n="subscribe">Iscriviti</button>
                 </div>
                 <div id="signupMessage" class="demo-message" style="display: none;" data-i18n="demoThankYou">
@@ -446,46 +525,59 @@
     </section>
 
     <!-- Footer -->
-     <footer class="footer">
-      <div class="container">
-        <h2 class="footer-headline">Trend: your market radar!</h2>
-        <div class="footer-content">
-            <div class="footer-left">
-            <p><a href="mailto:contact@flashquad.com">contact@flashquad.com</a></p>
-            <p><a href="mailto:press@flashquad.com">press@flashquad.com</a></p>
-            <p>Flashquad Corporation - All Rights Reserved ©2024</p>
-            </div>
+    <footer class="footer">
+        <div class="container">
+            <h2 class="footer-headline">Trend: your market radar!</h2>
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p><a href="mailto:contact@flashquad.com">contact@flashquad.com</a></p>
+                    <p><a href="mailto:press@flashquad.com">press@flashquad.com</a></p>
+                    <p>Flashquad Corporation - All Rights Reserved ©2024</p>
+                </div>
 
-            <div class="footer-icons">
-            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M13.8587 24V13.0533H17.5316L18.0826 8.78588H13.8587V6.06176C13.8587 4.82664 14.2003 3.98492 15.9734 3.98492L18.2313 3.98399V0.167076C17.8408 0.116334 16.5005 0 14.9405 0C11.683 0 9.45282 1.98836 9.45282 5.63912V8.78588H5.7688V13.0533H9.45282V24H13.8587Z" fill="#FDFDFD"/>
-            </svg>
-            </a>
-            <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none">
-                <path d="M18.6717 0.378906H6.2239C2.73851 0.378906 0 3.11742 0 6.6028V19.0506C0 22.536 2.73851 25.2745 6.2239 25.2745H18.6717C22.1571 25.2745 24.8956 22.536 24.8956 19.0506V6.6028C24.8956 3.11742 22.1571 0.378906 18.6717 0.378906ZM22.406 19.0506C22.406 21.1667 20.7878 22.7849 18.6717 22.7849H6.2239C4.10777 22.7849 2.48956 21.1667 2.48956 19.0506V6.6028C2.48956 4.48668 4.10777 2.86846 6.2239 2.86846H18.6717C20.7878 2.86846 22.406 4.48668 22.406 6.6028V19.0506Z" fill="white"/>
-                <path d="M12.4478 6.60254C8.96239 6.60254 6.22388 9.34105 6.22388 12.8264C6.22388 16.3118 8.96239 19.0503 12.4478 19.0503C15.9332 19.0503 18.6717 16.3118 18.6717 12.8264C18.6717 9.34105 15.9332 6.60254 12.4478 6.60254ZM12.4478 16.5608C10.3316 16.5608 8.71344 14.9426 8.71344 12.8264C8.71344 10.7103 10.3316 9.0921 12.4478 9.0921C14.5639 9.0921 16.1821 10.7103 16.1821 12.8264C16.1821 14.9426 14.5639 16.5608 12.4478 16.5608Z" fill="white"/>
-                <path d="M18.6715 7.84796C19.359 7.84796 19.9163 7.29065 19.9163 6.60318C19.9163 5.91571 19.359 5.3584 18.6715 5.3584C17.9841 5.3584 17.4268 5.91571 17.4268 6.60318C17.4268 7.29065 17.9841 7.84796 18.6715 7.84796Z" fill="white"/>
-                </svg>
-            </a>
-            <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-                <path d="M14.4977 10.5416L23.5663 0H21.4173L13.543 9.15311L7.25384 0H0L9.51049 13.8411L0 24.8956H2.1491L10.4646 15.2296L17.1064 24.8956H24.3603L14.4971 10.5416H14.4977ZM11.5542 13.9631L10.5906 12.5848L2.92346 1.61781H6.22435L12.4118 10.4685L13.3754 11.8468L21.4184 23.3513H18.1175L11.5542 13.9636V13.9631Z" fill="white"/>
-                </svg>
-            </a>
-            <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="19" viewBox="0 0 26 19" fill="none">
-                <path d="M3.94531 0.376953C9.8776 0.0387582 15.8245 0.0387696 21.7568 0.376953C22.5323 0.422783 23.1343 0.613052 23.6045 0.905273C24.0744 1.19732 24.4196 1.59568 24.6768 2.06641C25.1939 3.01321 25.3514 4.24751 25.4414 5.4873C25.6254 7.94496 25.6254 10.4134 25.4414 12.8711C25.3514 14.1109 25.1938 15.3466 24.6768 16.2939C24.4196 16.7649 24.0743 17.1632 23.6045 17.4551C23.1343 17.7471 22.5323 17.9365 21.7568 17.9814C15.8245 18.3196 9.87761 18.3196 3.94531 17.9814C3.17004 17.9356 2.56875 17.7453 2.09863 17.4531C1.62879 17.1611 1.28349 16.7636 1.02637 16.293C0.573834 15.4645 0.396308 14.4158 0.298828 13.3359L0.261719 12.8711L0.201172 11.9492C0.0804051 9.79672 0.100697 7.63782 0.261719 5.4873C0.351732 4.24742 0.509178 3.01174 1.02637 2.06445C1.28349 1.59366 1.62887 1.19607 2.09863 0.904297C2.56874 0.612319 3.17 0.421912 3.94531 0.376953ZM10.1592 12.6885L10.3408 12.5938L17.3164 8.92188L17.5244 8.8125L17.3164 8.70312L10.3408 5.03125L10.1592 4.93652V12.6885Z" fill="white" stroke="white" stroke-width="0.247121"/>
-                </svg>
-            </a>
-            </div>
+                <div class="footer-icons">
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none">
+                            <path
+                                d="M13.8587 24V13.0533H17.5316L18.0826 8.78588H13.8587V6.06176C13.8587 4.82664 14.2003 3.98492 15.9734 3.98492L18.2313 3.98399V0.167076C17.8408 0.116334 16.5005 0 14.9405 0C11.683 0 9.45282 1.98836 9.45282 5.63912V8.78588H5.7688V13.0533H9.45282V24H13.8587Z"
+                                fill="#FDFDFD" />
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none">
+                            <path
+                                d="M18.6717 0.378906H6.2239C2.73851 0.378906 0 3.11742 0 6.6028V19.0506C0 22.536 2.73851 25.2745 6.2239 25.2745H18.6717C22.1571 25.2745 24.8956 22.536 24.8956 19.0506V6.6028C24.8956 3.11742 22.1571 0.378906 18.6717 0.378906ZM22.406 19.0506C22.406 21.1667 20.7878 22.7849 18.6717 22.7849H6.2239C4.10777 22.7849 2.48956 21.1667 2.48956 19.0506V6.6028C2.48956 4.48668 4.10777 2.86846 6.2239 2.86846H18.6717C20.7878 2.86846 22.406 4.48668 22.406 6.6028V19.0506Z"
+                                fill="white" />
+                            <path
+                                d="M12.4478 6.60254C8.96239 6.60254 6.22388 9.34105 6.22388 12.8264C6.22388 16.3118 8.96239 19.0503 12.4478 19.0503C15.9332 19.0503 18.6717 16.3118 18.6717 12.8264C18.6717 9.34105 15.9332 6.60254 12.4478 6.60254ZM12.4478 16.5608C10.3316 16.5608 8.71344 14.9426 8.71344 12.8264C8.71344 10.7103 10.3316 9.0921 12.4478 9.0921C14.5639 9.0921 16.1821 10.7103 16.1821 12.8264C16.1821 14.9426 14.5639 16.5608 12.4478 16.5608Z"
+                                fill="white" />
+                            <path
+                                d="M18.6715 7.84796C19.359 7.84796 19.9163 7.29065 19.9163 6.60318C19.9163 5.91571 19.359 5.3584 18.6715 5.3584C17.9841 5.3584 17.4268 5.91571 17.4268 6.60318C17.4268 7.29065 17.9841 7.84796 18.6715 7.84796Z"
+                                fill="white" />
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M14.4977 10.5416L23.5663 0H21.4173L13.543 9.15311L7.25384 0H0L9.51049 13.8411L0 24.8956H2.1491L10.4646 15.2296L17.1064 24.8956H24.3603L14.4971 10.5416H14.4977ZM11.5542 13.9631L10.5906 12.5848L2.92346 1.61781H6.22435L12.4118 10.4685L13.3754 11.8468L21.4184 23.3513H18.1175L11.5542 13.9636V13.9631Z"
+                                fill="white" />
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="19" viewBox="0 0 26 19" fill="none">
+                            <path
+                                d="M3.94531 0.376953C9.8776 0.0387582 15.8245 0.0387696 21.7568 0.376953C22.5323 0.422783 23.1343 0.613052 23.6045 0.905273C24.0744 1.19732 24.4196 1.59568 24.6768 2.06641C25.1939 3.01321 25.3514 4.24751 25.4414 5.4873C25.6254 7.94496 25.6254 10.4134 25.4414 12.8711C25.3514 14.1109 25.1938 15.3466 24.6768 16.2939C24.4196 16.7649 24.0743 17.1632 23.6045 17.4551C23.1343 17.7471 22.5323 17.9365 21.7568 17.9814C15.8245 18.3196 9.87761 18.3196 3.94531 17.9814C3.17004 17.9356 2.56875 17.7453 2.09863 17.4531C1.62879 17.1611 1.28349 16.7636 1.02637 16.293C0.573834 15.4645 0.396308 14.4158 0.298828 13.3359L0.261719 12.8711L0.201172 11.9492C0.0804051 9.79672 0.100697 7.63782 0.261719 5.4873C0.351732 4.24742 0.509178 3.01174 1.02637 2.06445C1.28349 1.59366 1.62887 1.19607 2.09863 0.904297C2.56874 0.612319 3.17 0.421912 3.94531 0.376953ZM10.1592 12.6885L10.3408 12.5938L17.3164 8.92188L17.5244 8.8125L17.3164 8.70312L10.3408 5.03125L10.1592 4.93652V12.6885Z"
+                                fill="white" stroke="white" stroke-width="0.247121" />
+                        </svg>
+                    </a>
+                </div>
 
-            <div class="footer-right">
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Privacy Policy</a>
+                <div class="footer-right">
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
             </div>
         </div>
-      </div>
     </footer>
 
     <!-- <footer class="footer" id="contact">
@@ -499,116 +591,118 @@
         </div>
     </footer> -->
 
-    <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/animattions.js"></script>
     <script>
-     AOS.init();
+        AOS.init();
     </script>
-<script>
-  let lastScrollY = window.scrollY;
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const currentScroll = window.scrollY;
-      const scrollingUp = currentScroll < lastScrollY;
-      lastScrollY = currentScroll;
+    <script>
+        let lastScrollY = window.scrollY;
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const currentScroll = window.scrollY;
+                const scrollingUp = currentScroll < lastScrollY;
+                lastScrollY = currentScroll;
 
-      if (entry.isIntersecting) {
-        entry.target.classList.add("in-view");
-      } else {
-        // Only remove if scrolling UP (leaving section from top)
-        if (scrollingUp) {
-          entry.target.classList.remove("in-view");
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("in-view");
+                } else {
+                    // Only remove if scrolling UP (leaving section from top)
+                    if (scrollingUp) {
+                        entry.target.classList.remove("in-view");
+                    }
+                }
+            });
+        }, {
+            threshold: 0.4
+        });
+        const targetSection = document.querySelector('.zoom-section');
+        if (targetSection) sectionObserver.observe(targetSection);
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const title = document.querySelector(".hero-title");
+            const subtitle = document.querySelector(".hero-subtitle");
+            const cta = document.querySelector(".hero-cta");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Add animation classes
+                        title.classList.add("hero-title-animated");
+                        subtitle.classList.add("hero-subtitle-animated");
+                        cta.classList.add("hero-cta-animated");
+                    } else {
+                        // Delay before removing classes to allow reset animation
+                        setTimeout(() => {
+                            title.classList.remove("hero-title-animated");
+                            subtitle.classList.remove("hero-subtitle-animated");
+                            cta.classList.remove("hero-cta-animated");
+                        }, 300); // 400ms delay before removing
+                    }
+                });
+            }, {
+                threshold: 0.3
+            });
+
+            const heroSection = document.querySelector(".hero_section");
+            if (heroSection) {
+                observer.observe(heroSection);
+            }
+        });
+    </script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        function initScrollSteps() {
+            const steps = gsap.utils.toArray(".scroll-step");
+            const offset = 20;
+
+            steps.forEach((step, i) => {
+                const screenWidth = window.innerWidth;
+                let yMultiplier = 40;
+                if (screenWidth <= 480) {
+                    yMultiplier = 50;
+                } else if (screenWidth <= 768) {
+                    yMultiplier = 45;
+                }
+                const yValue = -(yMultiplier - (i * (offset / 2)));
+                const startValue = `${i * window.innerHeight * 0.5} top`;
+                const endValue = `${(i + 1) * window.innerHeight * 0.5} top`;
+                gsap.set(step, {
+                    zIndex: i + 1
+                });
+                gsap.to(step, {
+                    opacity: 1,
+                    y: `${yValue}%`,
+                    scrollTrigger: {
+                        trigger: ".how-it-works-scroll",
+                        start: startValue,
+                        end: endValue,
+                        scrub: true,
+                    }
+                });
+            });
+            ScrollTrigger.create({
+                trigger: ".how-it-works-scroll",
+                start: "top top",
+                end: () => "+=" + (steps.length * window.innerHeight * 0.5),
+                pin: true,
+                scrub: true,
+            });
         }
-      }
-    });
-  }, {
-    threshold: 0.4
-  });
-  const targetSection = document.querySelector('.zoom-section');
-  if (targetSection) sectionObserver.observe(targetSection);
-</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const title = document.querySelector(".hero-title");
-    const subtitle = document.querySelector(".hero-subtitle");
-    const cta = document.querySelector(".hero-cta");
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Add animation classes
-          title.classList.add("hero-title-animated");
-          subtitle.classList.add("hero-subtitle-animated");
-          cta.classList.add("hero-cta-animated");
-        } else {
-          // Delay before removing classes to allow reset animation
-          setTimeout(() => {
-            title.classList.remove("hero-title-animated");
-            subtitle.classList.remove("hero-subtitle-animated");
-            cta.classList.remove("hero-cta-animated");
-          }, 300); // 400ms delay before removing
-        }
-      });
-    }, {
-      threshold: 0.3
-    });
-
-    const heroSection = document.querySelector(".hero_section");
-    if (heroSection) {
-      observer.observe(heroSection);
-    }
-  });
-</script>
-
-<script>
-  gsap.registerPlugin(ScrollTrigger);
-
-  function initScrollSteps() {
-    const steps = gsap.utils.toArray(".scroll-step");
-    const offset = 20; 
-
-    steps.forEach((step, i) => {
-      const screenWidth = window.innerWidth;
-      let yMultiplier = 40;
-      if (screenWidth <= 480) {
-        yMultiplier = 50; 
-      } else if (screenWidth <= 768) {
-        yMultiplier = 45;
-      }
-      const yValue = -(yMultiplier - (i * (offset / 2)));
-      const startValue = `${i * window.innerHeight * 0.5} top`;
-      const endValue = `${(i + 1) * window.innerHeight * 0.5} top`;
-      gsap.set(step, {
-        zIndex: i + 1
-      });
-      gsap.to(step, {
-        opacity: 1,
-        y: `${yValue}%`,
-        scrollTrigger: {
-          trigger: ".how-it-works-scroll",
-          start: startValue,
-          end: endValue,
-          scrub: true,
-        }
-      });
-    });
-    ScrollTrigger.create({
-      trigger: ".how-it-works-scroll",
-      start: "top top",
-      end: () => "+=" + (steps.length * window.innerHeight * 0.5),
-      pin: true,
-      scrub: true,
-    });
-  }
-  initScrollSteps();
-  window.addEventListener("resize", () => {
-    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    initScrollSteps();
-  });
-</script>
+        initScrollSteps();
+        window.addEventListener("resize", () => {
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+            initScrollSteps();
+        });
+    </script>
 
 </body>
-</html> 
+
+</html>

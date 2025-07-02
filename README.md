@@ -10,8 +10,8 @@ Piattaforma di previsione dei mercati finanziari che sfrutta la gamification per
 - `team.html` - Il nostro team
 - `invest.html` - Opportunità di investimento
 - `collaborate.html` - Collabora con noi
-- `styles.css` - Stili CSS
-- `script.js` - Funzionalità JavaScript
+- `css/styles.css` - Stili CSS
+- `js/script.js` - Funzionalità JavaScript
 - `assets/` - Risorse multimediali
 - `vercel.json` - Configurazione Vercel
 - `robots.txt` - File per SEO
