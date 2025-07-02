@@ -347,7 +347,10 @@ section.vedio-section {
 }
 
 /* hero section css start here */
-
+.hero {
+  position: relative;
+  overflow: hidden;
+}
 .hero-title,
 .hero-subtitle,
 .hero-cta {
@@ -2467,7 +2470,7 @@ font-size: 0.9rem;
 
 /* New Banner Styles */
 .banner {
-  padding: 180px 0 400px;
+  padding: 180px 0 80px;
   background: url(../Images/hero-bg.webp) center/cover no-repeat;
   position: relative;
 }
@@ -2483,7 +2486,9 @@ font-size: 0.9rem;
   border: 10px solid #0000001a;
   border-radius: 36px;
   overflow: hidden;
-  margin-top: 60px;
+  margin: 60px auto 0;
+  position: relative;
+  z-index: 3;
 }
 .banner-vid video {
   width: 100%;

@@ -110,74 +110,66 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Debug checks
-  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
-    console.error('GSAP or ScrollTrigger not loaded!');
-    return;
-  }
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  // Element selection
-  const banner = document.querySelector('.banner');
-  const bannerVid = document.querySelector('.banner-vid');
-  const bannerInner = document.querySelector('.banner-inner');
-
-  if (!banner || !bannerVid || !bannerInner) {
-    console.error('Missing required elements');
-    return;
-  }
-
-  // Set initial styles (important!)
-  gsap.set(bannerVid, {
-    width: "60%",
-    height: "50vh",
-    borderRadius: "36px"
-  });
-
-  gsap.set(bannerInner, {
-    y: 0
-  });
-
-  // Create separate ScrollTriggers for better control
-  // Video animation
-  gsap.to(bannerVid, {
-    width: "100vw",
-    height: "100vh",
-    borderRadius: 0,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: banner,
-      start: "40% top",
-      end: "+=90%",
-      scrub: 1,
-      pin: true,
-      markers: true,
-      onEnterBack: () => {
-        // Reset when scrolling back up
-        gsap.set(bannerVid, {
-          width: "60%",
-          height: "50vh",
-          borderRadius: "36px"
-        });
-      }
-    }
-  });
-
-  // Inner content animation (starts later)
-  gsap.to(bannerInner, {
-    y: "-30vh",
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: banner,
-      start: "50% top", // Starts later than video
-      end: "+=100%",
-      scrub: 1,
-      markers: true,
-      onEnterBack: () => {
-        // Reset when scrolling back up
-        gsap.set(bannerInner, { y: 0 });
-      }
-    }
-  });
+    // Register ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Select elements
+    const bannerInner = document.querySelector('.banner-inner');
+    const bannerVid = document.querySelector('.banner-vid');
+    const video = document.querySelector('.banner-vid video');
+    
+    // Set initial styles for video container
+    gsap.set(bannerVid, {
+        width: '60%',
+        height: 'auto'
+    });
+    
+    // Create the animation timeline
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.banner',
+            start: '10% top',
+            end: '+=2000', // Adjust this value based on how long you want the scroll to take
+            scrub: 1, // Makes the animation smooth with scroll
+            pin: true, // Pins the banner section while scrolling
+            anticipatePin: 1,
+            // markers: true // Helpful for debugging, remove in production
+        }
+    });
+    
+    // Animation sequence
+    tl.to(bannerInner, {
+        y: '-17vh', // Moves the inner content upwards
+        ease: 'none'
+    })
+    .to(bannerVid, {
+        width: '100vw',
+        height: '102vh',
+        y: -400, // Moves the inner content upwards
+        borderRadius: 0,
+        borderWidth: 0,
+        marginTop: 0,
+        ease: 'none',
+        duration: 1
+    }, 0)
+    .to(bannerVid, {
+        duration: 0.5 // Pins at full width for a short duration
+    })
+    .to(bannerVid, {
+        width: '60%',
+        height: 'auto',
+        borderRadius: '36px',
+        borderWidth: '10px',
+        marginTop: '60px',
+        y: 0,
+        ease: 'none',
+        duration: 1
+    });
+    
+    // Make sure video fills its container during animation
+    gsap.set(video, {
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover'
+    });
 });
