@@ -311,6 +311,26 @@ document.addEventListener('DOMContentLoaded', () => {
             investContactTitle: "Direct Contacts",
             investContactText: "If you are interested in collaborating or investing in the project, you can write to us at:",
             investContactNote: "The team will respond with additional material on request (pitch, deck, roadmap, market analysis).",
+
+            // our Story section
+            storytittle:"Discover Our Story: Redefine Digital Excellence at NextMarketing.",
+            storylead:"Step into the heart of NextMarketing, where a dynamic blend of passion and expertise fuels our journey to redefine digital success.",
+            storydesc:"Since 2012, we’ve been pioneering innovative solutions, crafting unique narratives, and consistently delivering exceptional results. Join us in shaping the future of digital excellence!",
+            storystarted:"Get Started",
+            storywork:"How it work?",
+            featuretitle1:"Digital Innovation Leaders",
+             featuretitle2:"Proven Results Achievers",
+              featuretitle3:"Tailored Strategy Experts",
+        
+                   //   about section
+            aboutlabel:"About Us",
+            abouttitle:"Finance Guide On All Phase Of Life.",
+            aboutdesc:"This statistic is based on our average personal current account online opening time from the last 12 months.",
+            aboutfeaturetitle1:"Solution Focused",
+            aboutfeaturedesc1:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis tincidunt feugiat",
+            aboutfeaturetitle2:"99.99% Success",
+            aboutfeaturedesc2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis tincidunt feugiat",
+            aboutdiscover:"Discover More",
         },
         it: {
             // Navigation
@@ -443,6 +463,27 @@ document.addEventListener('DOMContentLoaded', () => {
             investContactTitle: "Contatti diretti",
             investContactText: "Se sei interessato a collaborare o investire nel progetto, puoi scriverci a:",
             investContactNote: "Il team risponderà con materiale aggiuntivo su richiesta (pitch, deck, roadmap, analisi di mercato).",
+
+            // our Story section
+            storytittle:"Scopri la nostra storia: Ridefinisci l'eccellenza digitale con NextMarketing.",
+            storylead:"Entra nel cuore di NextMarketing, dove un mix dinamico di passione e competenza alimenta il nostro percorso per ridefinire il successo digitale.",
+            storydesc:"Dal 2012, siamo pionieri di soluzioni innovative, creiamo narrazioni uniche e forniamo costantemente risultati eccezionali. Unisciti a noi per plasmare il futuro dell'eccellenza digitale!",
+            storystarted:"Inizia",
+            storywork:"Come funziona?",
+            featuretitle1:"Leader dell'innovazione digitale",
+             featuretitle2:"Risultati comprovati Persone di successo",
+              featuretitle3:"Esperti in strategie su misura",
+
+            //   about section
+            aboutlabel:"Chi siamo",
+            abouttitle:"Guida finanziaria per tutte le fasi della vita.",
+            aboutdesc:"Questa statistica si basa sul tempo medio di apertura dei nostri conti correnti personali online negli ultimi 12 mesi.",
+            aboutfeaturetitle1:"Focalizzata sulla soluzione",
+            aboutfeaturedesc1:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis tincidunt feugiat",
+            aboutfeaturetitle2:"Successo del 99,99%",
+            aboutfeaturedesc2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis tincidunt feugiat",
+            aboutdiscover:"Scopri di più",
+
         }
     };
 
