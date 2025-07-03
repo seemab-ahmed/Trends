@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Select elements
   const bannerInner = document.querySelector(".banner-inner");
   const bannerVid = document.querySelector(".banner-vid");
-  // const video = document.querySelector('.banner-vid video');
+  const video = document.querySelector('.banner-vid video');
   const platformTitle = document.querySelector(".platform-title");
 
   // Set initial styles for video container

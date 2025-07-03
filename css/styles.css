@@ -892,12 +892,12 @@ color: #fe2e2e;
     border-bottom: 1px solid #60c0ff;
   }
   .about__title {
-    font-family: "Ubuntu", sans-serif;
-    font-size: clamp(30px, 4vw, 49px);
-    font-weight: 800;
+    font-size: 60px;
+    font-weight: 700;
     margin-bottom: 20px;
     color: #000;
-    line-height: 1.5;
+    line-height: 1.2;
+    margin-top: 10px;
   }
   .about__desc {
      font-weight: 600;
@@ -1402,8 +1402,8 @@ margin: 0;
 background-color: #f3f9f4 !important;
     border-radius: 40px;
     padding: 100px 0;
-background: url('../Images/faq-bg.webp') no-repeat center;
-background-size: cover;
+background: url('../Images/faq-bg.webp') repeat ;
+background-size: contain;
 }
 .faq-section .faq-title{
     color:#000 !important;
@@ -1429,7 +1429,7 @@ background-size: cover;
 }
 .faq-section .faq-grid {
 display: grid;
-gap: 24px;
+gap: 20px;
 /* max-width: 800px; */
 margin: 48px auto 0;
 }
@@ -1461,19 +1461,16 @@ transition: transform 0.3s ease;
   height: 20px;
 }
 .faq-section .faq-answer {
-max-height: 0;
-overflow: hidden;
-transition: max-height 0.4s ease, padding 0.4s ease;
-padding: 0 0;
-}
-
-.faq-section .faq-item.active .faq-answer {
-max-height: 200px; 
 padding: 10px 0;
 }
 
-.faq-section .faq-item.active .faq-icon {
-transform: rotate(-180deg); 
+/* .faq-section .faq-item.active .faq-answer {
+max-height: 400px; 
+} */
+
+.faq-section .faq-question.active .faq-icon {
+  transform: rotate(-180deg); 
+  transition: all 0.5s ease-in-out;
 
 }
 

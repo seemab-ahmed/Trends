@@ -21,20 +21,20 @@
   });
 
 // hero animation
-  document.addEventListener("DOMContentLoaded", () => {
-    const title = document.querySelector(".hero-title");
-    const subtitle = document.querySelector(".hero-subtitle");
+//   document.addEventListener("DOMContentLoaded", () => {
+//     const title = document.querySelector(".hero-title");
+//     const subtitle = document.querySelector(".hero-subtitle");
 
-    title.addEventListener("mousemove", (e) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 10;
-      const y = (e.clientY / window.innerHeight - 0.5) * 10;
-      title.style.transform = `translate(${x}px, ${y}px)`;
-    });
+//     title.addEventListener("mousemove", (e) => {
+//       const x = (e.clientX / window.innerWidth - 0.5) * 10;
+//       const y = (e.clientY / window.innerHeight - 0.5) * 10;
+//       title.style.transform = `translate(${x}px, ${y}px)`;
+//     });
 
-    title.addEventListener("mouseleave", () => {
-      title.style.transform = "translate(0, 0)";
-    });
-  });
+//     title.addEventListener("mouseleave", () => {
+//       title.style.transform = "translate(0, 0)";
+//     });
+//   });
 
 //   scrool animation on cards
 // const steps = document.querySelectorAll('[data-step]');
@@ -804,20 +804,15 @@ function initHeroAnimations() {
 }
 
 // simple faq js
-  const faqItems = document.querySelectorAll(".faq-item");
-  faqItems.forEach(item => {
-    const question = item.querySelector(".faq-question");
-    question.addEventListener("click", () => {
-      const isOpen = item.classList.contains("active");
-      faqItems.forEach(i => i.classList.remove("active"));
-      if (!isOpen) item.classList.add("active");
-    });
-  });
-
-
-
-
-
+//   const faqItems = document.querySelectorAll(".faq-item");
+//   faqItems.forEach(item => {
+//     const question = item.querySelector(".faq-question");
+//     question.addEventListener("click", () => {
+//       const isOpen = item.classList.contains("active");
+//       faqItems.forEach(i => i.classList.remove("active"));
+//       if (!isOpen) item.classList.add("active");
+//     });
+//   });
 /*
 ISTRUZIONI PER CONFIGURARE GOOGLE APPS SCRIPT:
 
@@ -912,108 +907,25 @@ NOTA SULLA SICUREZZA:
   * Limitare l'accesso a domini specifici
 */ 
 
-// new js cursor 
-class CustomCursor {
-    constructor() {
-        this.delay = 8;
-        this._x = 0;
-        this._y = 0;
-        this.endX = window.innerWidth / 2;
-        this.endY = window.innerHeight / 2;
-        this.cursorVisible = true;
-        this.cursorEnlarged = false;
+ // FAQs Js here
+$(document).ready(function() {
+  // Hide all FAQ bodies initially
+  $('.faq-answer').hide();
 
-        this.$dot = document.querySelector('.cursor-dot');
-        this.$outline = document.querySelector('.cursor-dot-outline');
+  // Show the first FAQ item by default
+  $('.faq-item:first-child .faq-answer').show();
+  $('.faq-item:first-child .faq-question').addClass('active');
 
-        this.dotSize = this.$dot.offsetWidth;
-        this.outlineSize = this.$outline.offsetWidth;
+  // Click event for FAQ headers
+  $('.faq-question').click(function() {
+    var $thisBody = $(this).next('.faq-answer');
 
-        this.init();
-    }
+    // Toggle the clicked body
+    $thisBody.slideToggle();
+    $(this).toggleClass('active');
 
-    init() {
-        this.setupEventListeners();
-        this.animateDotOutline();
-    }
-
-    setupEventListeners() {
-        // Hover on links
-        document.querySelectorAll('a').forEach(el => {
-            el.addEventListener('mouseover', () => {
-                this.cursorEnlarged = true;
-                this.toggleCursorSize();
-            });
-            el.addEventListener('mouseout', () => {
-                this.cursorEnlarged = false;
-                this.toggleCursorSize();
-            });
-        });
-
-        // Mouse click
-        document.addEventListener('mousedown', () => {
-            this.cursorEnlarged = true;
-            this.toggleCursorSize();
-        });
-        document.addEventListener('mouseup', () => {
-            this.cursorEnlarged = false;
-            this.toggleCursorSize();
-        });
-
-        // Mouse move
-        document.addEventListener('mousemove', (e) => {
-            this.cursorVisible = true;
-            this.toggleCursorVisibility();
-
-            this.endX = e.pageX;
-            this.endY = e.pageY;
-
-            this.$dot.style.top = `${this.endY}px`;
-            this.$dot.style.left = `${this.endX}px`;
-        });
-
-        // Enter/leave viewport
-        document.addEventListener('mouseenter', () => {
-            this.cursorVisible = true;
-            this.toggleCursorVisibility();
-            this.$dot.style.opacity = 1;
-            this.$outline.style.opacity = 1;
-        });
-
-        document.addEventListener('mouseleave', () => {
-            this.cursorVisible = false;
-            this.toggleCursorVisibility();
-            this.$dot.style.opacity = 0;
-            this.$outline.style.opacity = 0;
-        });
-    }
-
-    animateDotOutline() {
-        this._x += (this.endX - this._x) / this.delay;
-        this._y += (this.endY - this._y) / this.delay;
-
-        this.$outline.style.top = `${this._y}px`;
-        this.$outline.style.left = `${this._x}px`;
-
-        requestAnimationFrame(this.animateDotOutline.bind(this));
-    }
-
-    toggleCursorSize() {
-        if (this.cursorEnlarged) {
-            this.$dot.style.transform = 'translate(-50%, -50%) scale(0.75)';
-            this.$outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
-        } else {
-            this.$dot.style.transform = 'translate(-50%, -50%) scale(1)';
-            this.$outline.style.transform = 'translate(-50%, -50%) scale(1)';
-        }
-    }
-
-    toggleCursorVisibility() {
-        const opacity = this.cursorVisible ? 1 : 0;
-        this.$dot.style.opacity = opacity;
-        this.$outline.style.opacity = opacity;
-    }
-}
-
-// Initialize the cursor
-document.addEventListener('DOMContentLoaded', () => new CustomCursor());
+    // Close all other FAQ bodies and remove active class
+    $('.faq-question').not(this).removeClass('active');
+    $('.faq-answer').not($thisBody).slideUp();
+  });
+});
