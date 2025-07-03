@@ -1360,9 +1360,9 @@ scroll-margin-top: 80px;
 }
 
 /* Ensure proper spacing between sections */
-section + section {
+/* section + section {
 margin-top: var(--section-spacing);
-}
+} */
 
 /* Section Styles */
 .content-section {
@@ -2471,8 +2471,9 @@ font-size: 0.9rem;
 /* New Banner Styles */
 .banner {
   padding: 180px 0 80px;
-  background: url(../Images/hero-bg.webp) center/cover no-repeat;
+  background: url(../Images/bg-gradient.webp) center/cover no-repeat;
   position: relative;
+  overflow: hidden;
 }
 .banner-inner {
   text-align: center;
@@ -2486,7 +2487,7 @@ font-size: 0.9rem;
   border: 10px solid #0000001a;
   border-radius: 36px;
   overflow: hidden;
-  margin: 60px auto 0;
+  margin: 40px auto 0;
   position: relative;
   z-index: 3;
 }
@@ -2616,4 +2617,35 @@ font-size: 0.9rem;
   width: 40px;
   height: 40px;
   background-color: rgba(13, 140, 224, 0.51);
+}
+/* lng heading-style */
+.platform-section {
+  padding: 40px 0;
+  position: relative;
+  overflow: hidden;
+  background: #f7f7f7;
+}
+.platform-title {
+  text-align: center;
+  font-size: 80px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  position: relative;
+  color: #004674;
+  z-index: 1;
+}
+.overlay-animation {
+    z-index: 1;
+    grid-column-gap: 1%;
+    grid-row-gap: 1%;
+    display: flex;
+    position: absolute;
+    inset: 0%;
+}
+.overlay-element {
+    perspective-origin: 100%;
+    transform-origin: 100%;
+    background-color: #1DA1F2;
+    width: 20%;
+    height: 100%;
 }

@@ -105,71 +105,117 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize the cursor
   new CustomCursor();
-
-  
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Register ScrollTrigger plugin
-    gsap.registerPlugin(ScrollTrigger);
-    
-    // Select elements
-    const bannerInner = document.querySelector('.banner-inner');
-    const bannerVid = document.querySelector('.banner-vid');
-    const video = document.querySelector('.banner-vid video');
-    
-    // Set initial styles for video container
-    gsap.set(bannerVid, {
-        width: '60%',
-        height: 'auto'
-    });
-    
-    // Create the animation timeline
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.banner',
-            start: '10% top',
-            end: '+=2000', // Adjust this value based on how long you want the scroll to take
-            scrub: 1, // Makes the animation smooth with scroll
-            pin: true, // Pins the banner section while scrolling
-            anticipatePin: 1,
-            // markers: true // Helpful for debugging, remove in production
-        }
-    });
-    
-    // Animation sequence
-    tl.to(bannerInner, {
-        y: '-17vh', // Moves the inner content upwards
-        ease: 'none'
+document.addEventListener("DOMContentLoaded", function () {
+  // Register ScrollTrigger plugin
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Select elements
+  const bannerInner = document.querySelector(".banner-inner");
+  const bannerVid = document.querySelector(".banner-vid");
+  // const video = document.querySelector('.banner-vid video');
+  const platformTitle = document.querySelector(".platform-title");
+
+  // Set initial styles for video container
+  gsap.set(bannerVid, {
+    width: "50%",
+    height: "auto",
+  });
+
+  // Create the animation timeline
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".banner",
+      start: "10% top",
+      end: "+=2000", // Adjust this value based on how long you want the scroll to take
+      scrub: 1, // Makes the animation smooth with scroll
+      pin: true, // Pins the banner section while scrolling
+      anticipatePin: 1,
+      // markers: true // Helpful for debugging, remove in production
+    },
+  });
+
+  // Animation sequence
+  tl.to(bannerInner, {
+    y: "-17vh", // Moves the inner content upwards
+    ease: "none",
+  }).to(
+    bannerVid,
+    {
+      width: "100vw",
+      height: "102vh",
+      y: -400, // Moves the inner content upwards
+      borderRadius: 0,
+      borderWidth: 0,
+      marginTop: 0,
+      ease: "none",
+      duration: 1,
+    },
+    0
+  );
+  tl.to(bannerInner, {
+    y: "0",
+  })
+    .to(bannerVid, {
+      duration: 0.5, // Pins at full width for a short duration
     })
     .to(bannerVid, {
-        width: '100vw',
-        height: '102vh',
-        y: -400, // Moves the inner content upwards
-        borderRadius: 0,
-        borderWidth: 0,
-        marginTop: 0,
-        ease: 'none',
-        duration: 1
-    }, 0)
-    .to(bannerVid, {
-        duration: 0.5 // Pins at full width for a short duration
-    })
-    .to(bannerVid, {
-        width: '60%',
-        height: 'auto',
-        borderRadius: '36px',
-        borderWidth: '10px',
-        marginTop: '60px',
-        y: 0,
-        ease: 'none',
-        duration: 1
+      width: "50%",
+      height: "auto",
+      borderRadius: "36px",
+      borderWidth: "10px",
+      marginTop: "60px",
+      y: 0,
+      ease: "none",
+      duration: 1,
     });
-    
-    // Make sure video fills its container during animation
-    gsap.set(video, {
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover'
+  // Platform section animation
+    const overlayEls = gsap.utils.toArray(".overlay-element");
+
+  gsap.set(overlayEls, {
+    transformOrigin: "right center",
+    rotationY: 0,
+    opacity: 1,
+  });
+
+  overlayEls.forEach((el, i) => {
+    ScrollTrigger.create({
+      trigger: ".overlay-animation",
+      start: "top 80%",
+      onEnter: () => {
+        gsap.to(el, {
+          rotationY: 90,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power2.inOut",
+          delay: i * 0.1, // Stagger effect (0.1s between each element)
+        });
+      },
+    //   once: true, // Only animate once
     });
+  });
+//   title 
+  gsap.fromTo(
+    platformTitle,
+    {
+      x: "10%",
+    },
+    {
+      x: "-190%", // Adjust this value for how much you want it to move left
+      scrollTrigger: {
+        trigger: ".platform-section",
+        start: "top 60%", // Starts when top of platform section reaches 80% of viewport
+        end: "top 10%",
+        scrub: 1,
+        // markers: true, // Remove in production
+      },
+    }
+  );
+  // Make sure video fills its container during animation
+  gsap.set(video, {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+  });
 });
