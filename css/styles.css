@@ -3138,3 +3138,98 @@ font-size: 0.9rem;
     width: 20%;
     height: 100%;
 }
+
+
+/* testi styles  */
+.testimonials-section {
+  text-align: center;
+    padding: 50px 0;
+    overflow: hidden;
+}
+.testimonials-section .slick-slide {
+    padding: 10px;
+}
+.testimonial-card {
+    background: #fffefe;
+    border-radius: 10px;
+    padding: 30px 25px;
+    position: relative;
+    text-align: left;
+    box-shadow: 0 4px 8px #100f0f9b;
+    transition: transform 0.3s;
+    overflow: hidden;
+    min-height: 350px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.testimonial-card::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 10px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #f0521b;
+}
+.testimonials-section .slick-slide:nth-child(even) .testimonial-card:before {
+    background: #1a2d4b;
+}
+.testimonial-card i {
+    font-size: 2rem;
+    color: #ff6f61; /* Accent color for the quote icon */
+    margin-bottom: 10px;
+}
+.testimonial-review {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-style: italic;
+}
+.testi-detail {
+    display: flex;
+    align-items: center;
+    /* margin-top: 15px; */
+}
+.testimonial-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 1px solid #e4e4e5;
+}
+.testi-role-name {
+    display: flex;
+    flex-direction: column;
+}
+.testimonial-name {
+    font-size: 1.2rem !important;
+    font-weight: bold;
+    color: #002746;
+}
+
+.testimonial-role {
+    font-size: 0.9rem;
+    color: #002746;
+}
+.testimonials-section .slick-dots {
+    bottom: -45px;
+}
+.testimonials-section .slick-dots li.slick-active {
+    width: 100px;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+.testimonials-section .slick-dots li {
+    background: #ff6f61;
+    height: 5px;
+    width: 20px;
+    transition: all 0.5s ease-in-out;
+    opacity: 0.5;
+}
+.testimonials-section .slick-dots li button {
+    opacity: 0;
+}

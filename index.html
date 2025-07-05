@@ -28,7 +28,9 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/test.svg">
-
+ <!-- Slick Carousel (used for carousels or sliders) -->
+  <link rel="stylesheet" href="css/slick.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -475,65 +477,9 @@
     </section>
 
     <!-- Kickstarter Section -->
-    <section class="testimonials animate-on-scroll" id="kickstarter">
-        <div class="section-background light"></div>
-        <div class="container">
-            <h2 class="about__title" data-i18n="kickstarterTitle" data-aos="fade-left" data-aos-duration="2000">
-                Sostienici su Kickstarter</h2>
-            <p class="kickstarter-intro" data-i18n="kickstarterIntro" data-aos="fade-right" data-aos-duration="2000">
-                Trend è live su Kickstarter e ha già raccolto €1.400 dai primi sostenitori. Aiutaci a costruire il
-                futuro della finanza predittiva!</p>
-
-            <!-- <div class="progress-container">
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 26%"></div>
-                </div>
-                <div class="progress-stats">
-                    <span class="progress-number">€1.400</span>
-                    <span class="progress-label" data-i18n="raised">raccolti su €5.000</span>
-                </div>
-            </div> -->
-
-            <div class="supporters-grid" data-aos="fade-up" data-aos-duration="2000">
-                <div class="supporter-card">
-                    <div class="supporter-avatar">GR</div>
-                    <div class="supporter-info">
-                        <h4>Giulia R.</h4>
-                        <p>Early Supporter</p>
-                    </div>
-                </div>
-                <div class="supporter-card">
-                    <div class="supporter-avatar">ML</div>
-                    <div class="supporter-info">
-                        <h4>Matteo L.</h4>
-                        <p>Early Supporter</p>
-                    </div>
-                </div>
-                <div class="supporter-card">
-                    <div class="supporter-avatar">SV</div>
-                    <div class="supporter-info">
-                        <h4>Serena V.</h4>
-                        <p>Early Supporter</p>
-                    </div>
-                </div>
-                <div class="supporter-card">
-                    <div class="supporter-avatar">LP</div>
-                    <div class="supporter-info">
-                        <h4>Luca P.</h4>
-                        <p>Early Supporter</p>
-                    </div>
-                </div>
-                <div class="supporter-card">
-                    <div class="supporter-avatar">AD</div>
-                    <div class="supporter-info">
-                        <h4>Angelo D.</h4>
-                        <p>Early Supporter</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
+  
+  <!-- Testimonial Section Ends -->
     <!-- FAQ Section -->
     <section class="faq animate-on-scroll faq-section" id="faq">
         <div class="section-background light"></div>
@@ -590,6 +536,182 @@
             </div>
         </div>
     </section>
+
+    <!-- <section class="testimonials animate-on-scroll" id="kickstarter">
+        <div class="section-background light"></div>
+        <div class="container">
+            <h2 class="about__title" data-i18n="kickstarterTitle" data-aos="fade-left" data-aos-duration="2000">
+                Sostienici su Kickstarter</h2>
+            <p class="kickstarter-intro" data-i18n="kickstarterIntro" data-aos="fade-right" data-aos-duration="2000">
+                Trend è live su Kickstarter e ha già raccolto €1.400 dai primi sostenitori. Aiutaci a costruire il
+                futuro della finanza predittiva!</p>
+
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 26%"></div>
+                </div>
+                <div class="progress-stats">
+                    <span class="progress-number">€1.400</span>
+                    <span class="progress-label" data-i18n="raised">raccolti su €5.000</span>
+                </div>
+            </div>
+
+            <div class="supporters-grid" data-aos="fade-up" data-aos-duration="2000">
+                <div class="supporter-card">
+                    <div class="supporter-avatar">GR</div>
+                    <div class="supporter-info">
+                        <h4>Giulia R.</h4>
+                        <p>Early Supporter</p>
+                    </div>
+                </div>
+                <div class="supporter-card">
+                    <div class="supporter-avatar">ML</div>
+                    <div class="supporter-info">
+                        <h4>Matteo L.</h4>
+                        <p>Early Supporter</p>
+                    </div>
+                </div>
+                <div class="supporter-card">
+                    <div class="supporter-avatar">SV</div>
+                    <div class="supporter-info">
+                        <h4>Serena V.</h4>
+                        <p>Early Supporter</p>
+                    </div>
+                </div>
+                <div class="supporter-card">
+                    <div class="supporter-avatar">LP</div>
+                    <div class="supporter-info">
+                        <h4>Luca P.</h4>
+                        <p>Early Supporter</p>
+                    </div>
+                </div>
+                <div class="supporter-card">
+                    <div class="supporter-avatar">AD</div>
+                    <div class="supporter-info">
+                        <h4>Angelo D.</h4>
+                        <p>Early Supporter</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+<section class="testimonials-section">
+    <div class="container">
+      <h2 class="about__title center">Testimonials</h2>
+      <div class="testimonials-slider">
+        <!-- Testimonial Items -->
+        <div class="testimonial-card">
+          <div class="testi-body">
+            <i class="fa fa-quote-left testimonial-quote-icon" aria-hidden="true"></i>
+            <blockquote class="testimonial-review">
+              "We've been impressed by the Cominfo team's expertise in 
+              process automation, database optimization, and delivering 
+              actionable analytics. Their professionalism and skill make 
+              them an invaluable partner. Highly recommended!"
+            </blockquote>
+          </div>
+          <div class="testi-detail">
+            <img src="images/logos/aam-testi.jpg" alt="American Axle & Manufacturing" class="testimonial-image"
+              loading="lazy" />
+            <div class="testi-role-name">
+              <h3 class="testimonial-name">Saima Sattar</h3>
+              <span class="testimonial-role">American Axle & Manufacturing</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testi-body">
+            <i class="fa fa-quote-left testimonial-quote-icon" aria-hidden="true"></i>
+          <blockquote class="testimonial-review">
+            "We have been extremely pleased with Cominfo's service and support. Their team has been, 
+            and will continue to be, a valued partner of Achen-Gardner. Their ability to deliver 
+            the results we need is outstanding and sincerely appreciated."
+          </blockquote>
+          </div>
+          <div class="testi-detail">
+            <img src="images/logos/achen-gardner.jpg" alt="Achen-Gardner" class="testimonial-image"
+              loading="lazy" />
+            <div class="testi-role-name">
+              <h3 class="testimonial-name">Brian Cork</h3>
+              <span class="testimonial-role">Achen-Gardner</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testi-body">
+            <i class="fa fa-quote-left testimonial-quote-icon" aria-hidden="true"></i>
+            <blockquote class="testimonial-review">
+              "I wanted to take a moment to thank you and your team at Cominfo 
+                for the partnership over the last few years. Your knowledge, 
+                dedication and collaboration has been instrumental in helping 
+                CFBNJ make great strides in our Business Intelligence journey."
+            </blockquote>
+          </div>
+          <div class="testi-detail">
+            <img src="images/logos/cfb-testi.jpg" alt="Community Foodbank of New Jersey" class="testimonial-image"
+              loading="lazy" />
+            <div class="testi-role-name">
+              <h3 class="testimonial-name">Bob Powell</h3>
+              <span class="testimonial-role">Community Foodbank of New Jersey</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testi-body">
+            <i class="fa fa-quote-left testimonial-quote-icon" aria-hidden="true"></i>
+            <blockquote class="testimonial-review">
+              "Cominfo delivered ahead of schedule and under budget a full-service solution for our project's
+              manufacturing data collection and retrieval needs."
+            </blockquote>
+          </div>
+          <div class="testi-detail">
+            <img src="images/logos/testi_logo1.jpg" alt="Bryan Buchanan - 3M Company" class="testimonial-image"
+              loading="lazy" />
+            <div class="testi-role-name">
+              <h3 class="testimonial-name">Bryan Buchanan</h3>
+              <span class="testimonial-role">3M Company</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testi-body">
+            <i class="fa fa-quote-left testimonial-quote-icon" aria-hidden="true"></i>
+            <blockquote class="testimonial-review">
+              "After using Cominfo's services for only a few months now, I feel that the quality of service is truly
+              outstanding and indeed beyond our expectations."
+            </blockquote>
+          </div>
+          <div class="testi-detail">
+            <img src="images/logos/testi_logo2.jpg" alt="Lt. John Vilano - U.S. Army" class="testimonial-image"
+              loading="lazy" />
+            <div class="testi-role-name">
+              <h3 class="testimonial-name">Lt. John Vilano</h3>
+              <span class="testimonial-role">U.S. Army</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testi-body">
+            <i class="fa fa-quote-left testimonial-quote-icon" aria-hidden="true"></i>
+            <blockquote class="testimonial-review">
+              "I can easily say that Cominfo has been one of the most professional and knowledgeable IT companies I have
+              done business with."
+            </blockquote>
+          </div>
+          <div class="testi-detail">
+            <img src="images/logos/testi_logo3.png" alt="Mark Garcia - McAllen Foreign Trade Zone"
+              class="testimonial-image" loading="lazy" />
+            <div class="testi-role-name">
+              <h3 class="testimonial-name">Mark Garcia</h3>
+              <span class="testimonial-role">McAllen Foreign Trade Zone</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Testimonial Section Starts -->
 
     <!-- Email Signup Section -->
     <section class="email-signup" id="email-signup">
@@ -800,6 +922,8 @@
             initScrollSteps();
         });
     </script>
+
+    <script type="text/javascript" src="js/slick.min.js"></script>
 
 </body>
 
