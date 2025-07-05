@@ -219,3 +219,22 @@ document.addEventListener("DOMContentLoaded", function () {
     objectFit: "cover",
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const el = document.querySelector(".banner-heading");
+  const words = el.textContent.trim().split(" ");
+  el.textContent = ""; // Clear original text
+
+  words.forEach((word, index) => {
+    const span = document.createElement("span");
+    span.className = "word";
+    span.textContent = word;
+
+    // Add space after each word (except the last one)
+    el.appendChild(span);
+    if (index < words.length - 1) {
+      el.appendChild(document.createTextNode("\u00A0")); // non-breaking space
+    }
+  });
+});

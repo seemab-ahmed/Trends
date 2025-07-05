@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
             whyDifferentText: "Trend isn't a social network, a broker, or a simulator. It's a reputation system built on accuracy. Top users earn visibility, perks, access to advanced features, and eventually rewards.",
 
             // Hero Section
-            heroTitle: "Trend: your market radar",
+            heroTitle: "Trend your market radar",
             heroSubtitle: "Trend is a prediction platform that leverages gamification to validate user accuracy. Each user makes predictions on stocks and crypto assets, monitors performance, and earns reputation scores based on precision. No direct trading, just signals and competition.",
             discoverTrend: "Discover Trend",
             requestDemo: "Request Demo",
@@ -313,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
             investContactNote: "The team will respond with additional material on request (pitch, deck, roadmap, market analysis).",
 
             // our Story section
-            storytittle:"Discover Our Story: Redefine Digital Excellence at NextMarketing.",
+            storytittle:"Redefine Digital Excellence at NextMarketing.",
             storylead:"Step into the heart of NextMarketing, where a dynamic blend of passion and expertise fuels our journey to redefine digital success.",
             storydesc:"Since 2012, we’ve been pioneering innovative solutions, crafting unique narratives, and consistently delivering exceptional results. Join us in shaping the future of digital excellence!",
             storystarted:"Get Started",
@@ -352,7 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
             whyDifferentText: "Trend non è un social, non è un broker e non è un simulatore: è un sistema reputazionale basato sull'accuratezza. I migliori ottengono visibilità, vantaggi, accesso a funzioni avanzate e in futuro compensi.",
 
             // Hero Section
-            heroTitle: "Trend: il tuo radar sui mercati",
+            heroTitle: "Trend il tuo radar sui mercati",
             heroSubtitle: "Trend è una piattaforma di previsione dei mercati finanziari che sfrutta la gamification per validare l'accuratezza degli utenti. Ogni utente formula previsioni su asset azionari e crypto, monitora le performance e ottiene punteggi reputazionali in base alla precisione. Nessuna operatività diretta, solo signal e competizione.",
             discoverTrend: "Scopri Trend",
             requestDemo: "Richiedi Demo",
@@ -465,7 +465,7 @@ document.addEventListener('DOMContentLoaded', () => {
             investContactNote: "Il team risponderà con materiale aggiuntivo su richiesta (pitch, deck, roadmap, analisi di mercato).",
 
             // our Story section
-            storytittle:"Scopri la nostra storia: Ridefinisci l'eccellenza digitale con NextMarketing.",
+            storytittle:"Ridefinisci l'eccellenza digitale con NextMarketing.",
             storylead:"Entra nel cuore di NextMarketing, dove un mix dinamico di passione e competenza alimenta il nostro percorso per ridefinire il successo digitale.",
             storydesc:"Dal 2012, siamo pionieri di soluzioni innovative, creiamo narrazioni uniche e forniamo costantemente risultati eccezionali. Unisciti a noi per plasmare il futuro dell'eccellenza digitale!",
             storystarted:"Inizia",
