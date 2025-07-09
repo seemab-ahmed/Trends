@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Animation sequence
   tl.to(bannerInner, {
-    y: "-17vh", // Moves the inner content upwards
+    y: "-35vh", // Moves the inner content upwards
     ease: "none",
   }).to(
     bannerVid,
@@ -243,7 +243,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // Initialize Slick Sliders
 $(document).ready(function () {
   // Client Slider
-  $(".client-slider").slick({
+  // Client Slider
+  $(".social-slider").slick({
     dots: false,
     infinite: true,
     speed: 3000,
@@ -251,10 +252,10 @@ $(document).ready(function () {
     autoplaySpeed: 0,
     centerMode: true,
     cssEase: "linear",
-    slidesToShow: 7,
+    slidesToShow: 6,
     slidesToScroll: 1,
     responsive: [
-      { breakpoint: 1280, settings: { slidesToShow: 6 } },
+      { breakpoint: 1280, settings: { slidesToShow: 5 } },
       { breakpoint: 1024, settings: { slidesToShow: 4 } },
       { breakpoint: 768, settings: { slidesToShow: 3 } },
       { breakpoint: 480, settings: { slidesToShow: 2 } },
