@@ -50,12 +50,7 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
-html,
-html *,
-body,
-body * {
-  cursor: none;
-}
+
 body {
 margin: 0;
 font-family: 'Inter', sans-serif;
@@ -2931,7 +2926,7 @@ font-size: 0.9rem;
 /* New Banner Styles */
 .banner {
   padding: 180px 0 80px;
-  background: url(../Images/bg-gradient.webp) center/cover no-repeat;
+  background-color:#f5f5f5;
   position: relative;
   overflow: hidden;
 }
