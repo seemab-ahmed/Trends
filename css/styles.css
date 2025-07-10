@@ -3319,3 +3319,66 @@ font-size: 25px;
 }
   
 }
+/* trends cards secton css here */
+.trend-section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.trend-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  justify-items: center;
+  align-items: center;
+}
+
+.trend-card {
+  background-color: #fff;
+  color: #111;
+  border-radius: 25px;
+  padding: 25px;
+  max-width: 320px;
+  width: 100%;
+  text-align: left;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.trend-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.trend-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.trend-center-img {
+  grid-row: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trend-center-img img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 40px;
+}
+
+@media (max-width: 768px) {
+  .trend-grid {
+    grid-template-areas:
+      "center"
+      "card1"
+      "card2"
+      "card3"
+      "card4";
+    grid-template-columns: 1fr;
+  }
+
+  .trend-center-img img {
+    max-width: 220px;
+  }
+}
