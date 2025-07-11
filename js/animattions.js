@@ -212,7 +212,33 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     }
   );
-  // Make sure video fills its container during animation
+const lt = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".trend-showcase-section",
+    start: "50% center",
+    end: "+=2000", // Adjust scroll duration
+    scrub: 1,
+    pin: true,
+    anticipatePin: 1,
+    // markers: true
+  }
+});
+
+// Animate pin-lines upward over entire scroll (start immediately)
+lt.to(".pin-lines", {
+  y: -1000,
+  opacity: 1,
+  ease: "none",
+  duration: 1,
+}, 0); // Start at 0 seconds (parallel with phones)
+
+// Animate phones with scroll (start immediately, overlap with pin-lines)
+lt.to(".trend-phone-1", { opacity: 1, y: 0, duration: 1 }, 0)
+  .to(".trend-phone-1", { opacity: 0, duration: 0.5 })
+  .to(".trend-phone-2", { opacity: 1, y: 0, duration: 1 })
+  .to(".trend-phone-2", { opacity: 0, duration: 0.5 })
+  lt.to(".trend-phone-3", { opacity: 1, y: 0, duration: 1 });
+
   gsap.set(video, {
     width: "100%",
     height: "100%",
