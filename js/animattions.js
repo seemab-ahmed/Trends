@@ -239,6 +239,37 @@ lt.to(".trend-phone-1", { opacity: 1, y: 0, duration: 1 }, 0)
   .to(".trend-phone-2", { opacity: 0, duration: 0.5 })
   lt.to(".trend-phone-3", { opacity: 1, y: 0, duration: 1 });
 
+  // rodmap section Animation 
+  const items = document.querySelectorAll('.timeline-item');
+  const fillLine = document.querySelector('.tl-line-fill');
+  const timelineContainer = document.querySelector('.timeline-items');
+
+  gsap.to(fillLine, {
+    height: "100%",
+    ease: "none",
+    scrollTrigger: {
+      trigger: timelineContainer,
+      start: "top center",
+      end: "bottom center",
+      scrub: true, // makes the animation follow scroll
+    }
+  });
+
+  // Optional: Add active state for each item
+  items.forEach((item) => {
+  ScrollTrigger.create({
+    trigger: item,
+    start: "top center",
+    end: "bottom center",
+    onEnter: () => {
+      item.classList.add('active');
+    },
+    onLeaveBack: () => {
+      item.classList.remove('active');
+    }
+  });
+});
+
   gsap.set(video, {
     width: "100%",
     height: "100%",

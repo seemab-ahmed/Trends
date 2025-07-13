@@ -343,6 +343,7 @@ document.addEventListener('DOMContentLoaded', () => {
             hiwItem2: "Track your results",
             hiwItem3: "Climb the leaderboard",
             // trend cardss
+            trendDiffer: "Why Trend is different",
             trendTitle1: "Trend isn’t a broker.",
             trendDesc1: "No accounts to link, no capital at risk. Just skill.",
             trendTitle2: "It’s not a generic social app.",
@@ -516,6 +517,7 @@ document.addEventListener('DOMContentLoaded', () => {
             hiwItem2: "Guarda i risultati",
             hiwItem3: "Scala la classifica",
             // trends cards section 
+            trendDiffer: "Perché Trend è diverso",
             trendTitle1: "Trend non è un broker.",
             trendDesc1: "Nessun conto da collegare, nessun capitale da rischiare. Solo abilità.",
             trendTitle2: "Non è un social generalista.",
