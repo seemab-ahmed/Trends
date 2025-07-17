@@ -184,8 +184,14 @@ padding: 0.7rem var(--container-padding);
 .nav-logo {
 text-decoration: none;
 color: white;
+display: flex;
+align-items: center;
+gap: 15px;
 }
-
+.nav-logo img {
+  width: 40px;
+  height: 40px;
+}
 .nav-logo .gradient-text {
 font-size: 1.6rem;
 font-weight: 700;
@@ -904,7 +910,7 @@ color: #fe2e2e;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-bottom: 30px;
+    margin-top: 30px;
   }
   .feature {
     display: flex;
@@ -912,8 +918,8 @@ color: #fe2e2e;
     align-items: center;
   }
   .feature__icon {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     color: #1680c6;
   }
   .feature__icon svg{
@@ -922,10 +928,10 @@ color: #fe2e2e;
     object-fit: cover;
   }
   .feature__title {
-    font-size:  clamp(20px, 2.5vw, 32px);
-    font-weight: 800;
+    font-size:  26px;
+    font-weight: 600;
     margin-bottom: 4px;
-    color: #000;
+    color: #fff;
   }
   .feature__text {
     font-size: 16px;
@@ -1547,7 +1553,7 @@ margin:0;
   text-align: center;
   display: block;
   margin-bottom: 40px;
-  
+
 }
 .roadmap {
 padding: 50px 0;
