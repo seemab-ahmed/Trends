@@ -1422,10 +1422,10 @@ width: 100%;
 /* FAQ Section */
 .faq-section.faq {
 margin: 0;
-background-color: #f3f9f4 !important;
+/* background-color: #f3f9f4 !important; */
     border-radius: 40px;
     padding: 100px 0;
-background: url('../Images/faq-bg.webp') repeat ;
+/* background: url('../Images/faq-bg.webp') repeat ; */
 background-size: contain;
 }
 .faq-section .faq-title{
@@ -3588,7 +3588,7 @@ background: #f5f5f5;
 }
 /* footer styles here  */
 .footer-new {
-    background: #1D1D1D;
+    background: #fff;
     padding: 40px 0 22px;
 }
 .footer-top {
@@ -3604,7 +3604,7 @@ background: #f5f5f5;
     width: 100%;
 }
 .footer-links a {
-    color: #F0F1F3;
+    color: #333;
     font-size: 16px;
     text-decoration: none;
 }
@@ -3624,7 +3624,7 @@ background: #f5f5f5;
     list-style-type: none;
 }
 .footer-links li {
-    border-right: 1px solid#F0F1F3;
+    border-right: 1px solid#ccc;
     padding-right: 25px;
     display: flex;
     align-items: center;
@@ -3638,8 +3638,7 @@ background: #f5f5f5;
     font-size: 20px;
 }
 .footer-icons a {
-    color: #1D1D1D;
-    background-color: #fff;
+    color: #333;
     width: 35px;
     text-align: center;
     border-radius: 1px;
@@ -3647,14 +3646,14 @@ background: #f5f5f5;
 }
 .footer-icons a:hover {
     background: #005ec4;
-    color: #fff;
+    color: #ccc;
 
 }
 .footer-icons i {
     padding: 8px 5px;
 }
 .footer-icons i:hover {
-    color: #fff;
+    color: #ccc;
 }
 .footer-bottom {
     display: flex;
@@ -3674,7 +3673,7 @@ background: #f5f5f5;
   text-decoration: none;
 }
 .bottom-info {
-    color: #F0F1F3;
+    color: #333;
     font-size: 16px;
     display: flex;
     flex-wrap: wrap;

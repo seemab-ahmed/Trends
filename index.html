@@ -540,10 +540,10 @@
         <div class="container">
             <h2 data-i18n="emailTitle" data-aos="fade-up" data-aos-duration="2000">Vuoi ricevere aggiornamenti in
                 anteprima?</h2>
-            <form class="signup-form" id="signupForm1">
+            <form class="signup-form" id="signupForm">
                 <div class="input-group">
                     <input type="email" id="signupEmail" data-i18n-placeholder="emailPlaceholder"
-                        placeholder="Il tuo indirizzo email" required>
+                        placeholder="Il tuo indirizzo email" required />
                     <!-- <button type="submit" class="primary-button glow-effect" data-i18n="subscribe">Iscriviti</button> -->
                    <!-- <button type="submit" class="primary-button glow-effect" data-i18n="subscribe">Iscriviti</button> -->
                     <button class="button" type="submit">
@@ -623,15 +623,11 @@
         </div>
         <div class="footer-bottom">
           <div class="contact-link">
-            <a href="mailto:contact@flashquad.com" class="bottom-info">
-              <i class="fa-solid fa-envelope"></i>contact@flashquad.com
-            </a>
-            <a href="mailto:press@flashquad.com" class="bottom-info">
-              <i class="fa-solid fa-envelope"></i>
-              press@flashquad.com
+            <a href="mailto:trendmarket.it@gmail.com" class="bottom-info">
+              <i class="fa-solid fa-envelope"></i> trendmarket.it@gmail.com
             </a>
           </div>
-          <span class="bottom-info">Flashquad Corporation - All Rights Reserved ©2024</span>
+          <span class="bottom-info">© 2025 Trend. Tutti i diritti riservati.</span>
         </div>
       </div>
     </footer>
@@ -758,60 +754,61 @@
         });
     </script>
 
-    <script>
-        // document.getElementById("signupForm1").addEventListener("submit", async function(e) {
-        // e.preventDefault();
-        // const email = document.getElementById("signupEmail").value;
-        // const messageDiv = document.getElementById("signupMessage");
+<script>
+        document.getElementById("signupForm1").addEventListener("submit", async function(e) {
+        e.preventDefault();
+        const email = document.getElementById("signupEmail").value;
+        const messageDiv = document.getElementById("signupMessage");
 
-        // try {
-        //     const response = await fetch("http://localhost:3000/subscribe", {
-        //     method: "POST",
-        //     headers: { "Content-Type": "application/json" },
-        //     body: JSON.stringify({ email })
-        //     });
-        //     const result = await response.json();
-        //     if (response.ok) {
-        //     messageDiv.style.display = "block";
-        //     messageDiv.textContent = result.message;
-        //     document.getElementById("signupEmail").value = ""; // Clear input
-        //     } else {
-        //     messageDiv.style.display = "block";
-        //     messageDiv.textContent = result.error;
+        try {
+            const response = await fetch("http://localhost:3000/subscribe", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email })
+            });
+            const result = await response.json();
+            if (response.ok) {
+            messageDiv.style.display = "block";
+            messageDiv.textContent = result.message;
+            document.getElementById("signupEmail").value = ""; // Clear input
+            } else {
+            messageDiv.style.display = "block";
+            messageDiv.textContent = result.error;
+            }
+        } catch (err) {
+            messageDiv.style.display = "block";
+            messageDiv.textContent = "❌ Failed to subscribe.";
+        }
+        });
+
+        // document.getElementById("signupForm1").addEventListener("submit", async function (e) {
+        //     e.preventDefault();
+        //     const email = document.getElementById("signupEmail").value;
+        //     const messageDiv = document.getElementById("signupMessage");
+        //     //   https://script.google.com/macros/s/AKfycbw19ChDcxU0pyz7B3P9oF83AOieue5a6X73V1_8pQ6MiLLBTqZ3hsmy09ErKJLauNs7/exec
+        //     // https://script.google.com/macros/s/AKfycbysxXD5uhrXNTzgxxT-mjfM_3unx-ybM9wU3Dmz6cYkuj9itxTmijsIP0KOD2V-uL0Z/exec
+        //     try {
+        //         const response = await fetch("https://script.google.com/macros/s/AKfycbyQFEx54p9MeXukzIMAECOcEtpxM1kGHm8ocur7Dm-P_lviBaT6C1-OwluHW75TThl5pA/exec", {
+        //         method: "POST",
+        //         headers: { "Content-Type": "application/json" },
+        //         body: JSON.stringify({ type: "newsletter", email }),
+        //         mode: "no-cors", 
+        //         });
+
+        //         const result = await response.json();
+        //         if (response.ok) {
+        //         messageDiv.style.display = "block";
+        //         messageDiv.textContent = result.message;
+        //         document.getElementById("signupEmail").value = ""; // Clear input
+        //         } else {
+        //         messageDiv.style.display = "block";
+        //         messageDiv.textContent = result.error;
+        //         }
+        //     } catch (err) {
+        //         messageDiv.style.display = "block";
+        //         messageDiv.textContent = "An error occurred: " + err.message;
         //     }
-        // } catch (err) {
-        //     messageDiv.style.display = "block";
-        //     messageDiv.textContent = "❌ Failed to subscribe.";
-        // }
-        // });
-
-        document.getElementById("signupForm1").addEventListener("submit", async function (e) {
-  e.preventDefault();
-  const email = document.getElementById("signupEmail").value;
-  const messageDiv = document.getElementById("signupMessage");
-
-  try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbysxXD5uhrXNTzgxxT-mjfM_3unx-ybM9wU3Dmz6cYkuj9itxTmijsIP0KOD2V-uL0Z/exec", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ type: "newsletter", email }),
-      mode: "no-cors", 
-    });
-
-    const result = await response.json();
-    if (response.ok) {
-      messageDiv.style.display = "block";
-      messageDiv.textContent = result.message;
-      document.getElementById("signupEmail").value = ""; // Clear input
-    } else {
-      messageDiv.style.display = "block";
-      messageDiv.textContent = result.error;
-    }
-  } catch (err) {
-    messageDiv.style.display = "block";
-    messageDiv.textContent = "An error occurred: " + err.message;
-  }
-});
+        //     });
 </script>
 
     <script type="text/javascript" src="js/slick.min.js"></script>

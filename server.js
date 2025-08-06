@@ -6,7 +6,8 @@ const app = express();
 const port = 3000;
 // AKfycbxXjJfPdtU4g2TNN6OQ_5GTGQ1OqtB2VWcZADP8uB93qlbznQC9W5E30WUHnBUHrtJp
 // Replace with your actual Google Apps Script URL
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbysxXD5uhrXNTzgxxT-mjfM_3unx-ybM9wU3Dmz6cYkuj9itxTmijsIP0KOD2V-uL0Z/exec";
+// https://script.google.com/macros/s/AKfycbysxXD5uhrXNTzgxxT-mjfM_3unx-ybM9wU3Dmz6cYkuj9itxTmijsIP0KOD2V-uL0Z/exec
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbypaPv8Js0bralCgaKvj9d3srE0t39pQfZev1AwnSNyGN3AVl6-HK6cyfXYADMmKCDO/exec";
 
 app.use(express.json());
 app.use(cors());
